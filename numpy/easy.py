@@ -9,3 +9,14 @@ for i in arr:
         max_val = i
 
 print(max_val)
+
+# Q2: Find smallest element
+
+arr = [10, 20, 30, 40, 50]
+
+min_val = arr[0]
+
+for i in arr:
+    if i <min_val:
+        min_val = i
+print(min_val)
