@@ -25,4 +25,15 @@ for i in  A:
             new.append(i)
 print("common:",common)
 print("A not in B:",new)
+
+# Q3. (1)Extract all elements divisible by 10
+#     (2)Replace elements greater than 20 with 0
+#     (3)Find cumulative sum of the modified array
+
+# (1) Extract all elements divisible by 10
+
+a = [5, 10, 15, 20, 25, 30]
+value
+for i in a:
+    if 
             
