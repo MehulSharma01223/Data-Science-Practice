@@ -3,14 +3,20 @@
 import numpy as np
 
 # Create dataset (rows = samples, columns = features)
+import numpy as np
+
 data = np.array([
     [25, 50000, 80],
     [30, 60000, 85],
     [35, 65000, 90],
     [40, 70000, 95],
-    [45, 80000, 100]
+    [45, 80000, 100],
+    [28, 52000, 82],
+    [32, 58000, 88],
+    [38, 72000, 92],
+    [42, 75000, 96],
+    [50, 90000, 105]
 ])
-
 # Step 1: Calculate mean of each column
 mean = np.mean(data, axis=0)
 
@@ -20,4 +26,9 @@ std = np.std(data, axis=0)
 # Step 3: Apply Z-score formula
 z_score = (data - mean) / std
 
+#Step 4: Outlier Detection
+outliers = data[np.abs(z_score) > 2]
+
 print("Standardized Data:\n", z_score)
+print("There are output of outliers " ,outlier)
+
