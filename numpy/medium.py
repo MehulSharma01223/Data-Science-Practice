@@ -33,7 +33,27 @@ print("A not in B:",new)
 # (1) Extract all elements divisible by 10
 
 a = [5, 10, 15, 20, 25, 30]
-value
+value = []
+new = []
 for i in a:
-    if 
+    if i % 10 == 0 and i not in value:
+        value.append(i)
+    else:
+        new.append(i)
+print("Divisible by 10 : ",value)
+print("Not Divisible by 10 : ", new)
+
+
+#   (2) Replace elements greater than 20 with 0
+#   (3) Find cumulative sum of the modified array
+a = [5, 10, 15, 20, 25, 30]
+total = 0
+for i in range(len(a)):
+    if a[i]>20:
+        a[i] = 0
+    total = total +a[i]
+print("Modified array :", a)
+print("Sum :" , total)
+
+
             
