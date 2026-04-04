@@ -55,5 +55,80 @@ for i in range(len(a)):
 print("Modified array :", a)
 print("Sum :" , total)
 
+# =========================
+# Day 2
+# =========================
+
+# Q4: Find common elements
+#     Find uncommon elements (both sides)
+
+# Ans
+A = [1,2,3,4,5]
+B = [4,5,6,7,8]
+common = []
+uncommon = []
+
+# common elements
+for i in A:
+    if i in B:
+        common.append(i)
+
+# A me jo B me nahi
+for i in A:
+    if i not in B:
+        uncommon.append(i)
+
+# B me jo A me nahi
+for i in B:
+    if i not in A:
+        uncommon.append(i)
+print("Common value :",common)
+print("Not common value : ",uncommon)
+
+# Q5: Create a (4×4) array
+#     Extract diagonal elements
+#     Find sum of diagonal
+
+# Ans
+import numpy as np
+
+# Create a array
+a = np.random.randint(1,100,(4,4))
+
+# Extract diagonal elements
+b = []
+total = 0 
+for i in range(len(a)):
+    b.append(int(a[i][i]))
+
+#     Find sum of diagonal
+
+for i in b:
+    total+=[i]
+print("there are diagonal value : ",b)
+print("all the diagonal value total : ",total)
+
+
+# Q6.  Given:
+#      A = [10,20,30,40,50]
+#      Replace values > 30 with -1
+#      Find cumulative sum after replacement
+
+import numpy as np
+A = np.array([10,20,30,40,50])
+
+#      Replace values > 30 with -1
+A[A > 30] = -1
+
+#      Find cumulative sum after replacement
+total = 0
+cumulative = []
+
+for i in A:
+    total+=i
+    cumulative.append(int(total))
+
+print(A)
+print(cumulative)
 
             
