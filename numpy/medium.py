@@ -132,3 +132,54 @@ print(A)
 print(cumulative)
 
             
+
+# =========================
+# Day 3
+# =========================
+
+
+# Q7.  Create a (3×5) array
+#      Reverse each row individually
+#      Reverse each column individually
+
+import numpy as np
+a = np.random.randint(1,100,(3,5))
+
+# reverse each row individually 
+row_reverse = a[:,::-1] 
+
+#      Reverse each column individually
+col_reverse =  a[::-1,:]
+print("Original: \n",a)
+print("Row Reversed:\n", row_reverse)
+print("Column Reversed:\n", col_reverse)
+
+
+# Q8.  Create a (4×4) array
+
+#      Extract upper triangle elements
+#      Extract lower triangle elements
+import numpy as np
+
+# Create 4×4 array
+a = np.random.randint(1, 100, (4, 4))
+
+upper = []
+lower = []
+
+# Extract upper & lower triangle
+for i in range(len(a)):
+    for j in range(len(a[i])):
+        
+        # Upper triangle
+        if j >= i:
+            upper.append(a[i][j])
+        
+        # Lower triangle
+        if i >= j:
+            lower.append(a[i][j])
+
+print("Array:\n", a)
+print("Upper Triangle:", upper)
+print("Lower Triangle:", lower)
+                             
