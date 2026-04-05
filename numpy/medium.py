@@ -182,4 +182,28 @@ for i in range(len(a)):
 print("Array:\n", a)
 print("Upper Triangle:", upper)
 print("Lower Triangle:", lower)
-                             
+
+
+# Q9  Create a (6×6) array
+#     Extract all elements where row index == column index (diagonal)
+#     Extract all elements where row index + column index = n-1 (anti-diagonal)
+#     Find difference between their sums
+
+import numpy as np
+
+# Create 6×6 array
+arr = np.random.randint(1, 100, (6, 6))
+print("Array:\n", arr)
+
+# Extract diagonal elements
+diag = np.diag(arr)
+
+# Extract anti-diagonal elements
+anti = np.diag(np.fliplr(arr))
+
+# Find difference between their sums
+diff = np.sum(diag) - np.sum(anti)
+
+print("Diagonal:", diag)
+print("Anti-diagonal:", anti)
+print("Difference:", diff)
