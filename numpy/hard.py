@@ -157,3 +157,28 @@ np.fill_diagonal(a, 0)
 a[np.arange(n), np.arange(n-1, -1, -1)] = 1
 
 print("\nModified Array:\n", a)
+
+# Q7. Create a (6×6) array
+#     Extract all elements where row index == column index (diagonal)
+#     Extract all elements where row index + column index = n-1 (anti-diagonal)
+#     Find difference between their sums
+
+import numpy as np
+
+# Create 6×6 array
+a = np.random.randint(1, 100, (6, 6))
+print("Array:\n", a)
+
+# Diagonal elements
+diag = np.diag(a)
+
+# Anti-diagonal elements
+anti = np.diag(np.fliplr(a))
+
+# Difference between sums
+diff = np.sum(diag) - np.sum(anti)
+
+print("\nDiagonal:", diag)
+print("Anti-diagonal:", anti)
+print("Difference:", diff)
+
