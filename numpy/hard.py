@@ -131,3 +131,29 @@ print("Row mean:", row_mean)
 print("Column std:", col_std)
 print("Values replaced (<0.2):", low_values)
 print("Final Normalized array:\n", Normalized)
+
+
+# =========================
+# Day 3
+# =========================
+
+
+# Q6 .Create a (5×5) array  
+#     Replace diagonal elements with 0 Replace 
+#     anti-diagonal elements with 1 Keep rest same
+
+import numpy as np
+
+# Create 5×5 array
+a = np.random.randint(1, 100, (5, 5))
+print("Original Array:\n", a)
+
+n = len(a)
+
+# Replace diagonal with 0
+np.fill_diagonal(a, 0)
+
+# Replace anti-diagonal with 1
+a[np.arange(n), np.arange(n-1, -1, -1)] = 1
+
+print("\nModified Array:\n", a)
