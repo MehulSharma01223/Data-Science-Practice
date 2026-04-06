@@ -202,5 +202,18 @@ print("Max value:", np.max(a))
 print("Row index:", index[0])
 print("Column index:", index[1])
 
+# Q.    Create a (4×4) array
+#       Replace border elements with -1
+#       Keep inner elements same
+import numpy as np
 
+a = np.random.randint(1, 100, (4,4))
+print("Original:\n", a)
 
+# Replace borders
+a[0, :] = -1      # top row
+a[-1, :] = -1     # bottom row
+a[:, 0] = -1      # left column
+a[:, -1] = -1     # right column
+
+print("\nModified:\n", a)
