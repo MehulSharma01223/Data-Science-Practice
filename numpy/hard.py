@@ -217,3 +217,22 @@ a[:, 0] = -1      # left column
 a[:, -1] = -1     # right column
 
 print("\nModified:\n", a)
+
+
+# Q.     Create a (6×6) array
+#        Extract elements where row index is even 
+#        Extract elements where column index is odd
+
+import numpy as np
+
+a = np.random.randint(1, 100, (6,6))
+print("Array:\n", a)
+
+# Row index even
+even_rows = a[::2, :]
+
+# Column index odd
+odd_cols = a[:, 1::2]
+
+print("\nEven Rows:\n", even_rows)
+print("\nOdd Columns:\n", odd_cols)
