@@ -182,3 +182,25 @@ print("\nDiagonal:", diag)
 print("Anti-diagonal:", anti)
 print("Difference:", diff)
 
+
+# =========================
+# Day 5
+# =========================
+
+# Q.     Create a (5×5) array
+#        Find row index and column index of maximum element
+
+import numpy as np
+
+a = np.random.randint(1, 100, (5,5))
+print(a)
+
+# index of max element
+index = np.unravel_index(np.argmax(a), a.shape)
+
+print("Max value:", np.max(a))
+print("Row index:", index[0])
+print("Column index:", index[1])
+
+
+
