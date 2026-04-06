@@ -207,3 +207,95 @@ diff = np.sum(diag) - np.sum(anti)
 print("Diagonal:", diag)
 print("Anti-diagonal:", anti)
 print("Difference:", diff)
+
+
+
+# =========================
+# Day 4
+# =========================
+
+# Q10.     Create a (3×4) array
+#          Add 5 to all elements
+#          Multiply entire array by 2
+import numpy as np
+
+arr = np.random.randint(1,10,(3,4))
+arr = arr +5
+print(arr)
+arr = arr*2
+print(arr)
+
+
+#Q11.      Create a (4×4) array
+#          Find sum of elements in each column
+#          Find product of elements in each row
+import numpy as np
+
+a = np.random.randint(1, 100, (4, 4))
+print("Array:\n", a)
+
+# Sum of each column
+total = a.sum(axis=0)
+
+# Product of each row
+prod = a.prod(axis=1)
+
+print("Column Sum:", total)
+print("Row Product:", prod)
+
+
+# Q12.    Create two arrays of same size
+#         Compare both arrays element-wise
+#         Return True/False array
+
+import numpy as np
+
+a = np.array([1, 2, 3, 4])
+b = np.array([1, 0, 3, 5])
+
+# Element-wise comparison
+result = a == b
+
+print("Array A:", a)
+print("Array B:", b)
+print("Comparison:", result)
+
+
+# =========================
+# Day 5
+# =========================
+
+
+# Q13.     Create a (5×3) array
+#          Find index positions where value > 50
+
+import numpy as np
+a = np.random.randint(1,100,(5,3))
+print(a)
+index = np.where(a>50)
+print(index)
+
+# Q14.     Create array [2,4,6,8,10]
+#          Create boolean mask for values > 5
+#          Use mask to extract values
+
+import numpy as np
+
+ar = np.array([2,4,6,8,10])
+
+mask = ar >5
+print (mask)
+print(ar[mask])
+
+
+# Q15     Create array [10,20,30,40,50]
+#         Shift elements right by 1 position
+
+import numpy as np
+
+A = np.array([10,20,30,40,50])
+
+last = A[-1]
+A[1:] = A[:-1]
+A[0] = last
+print(A)
