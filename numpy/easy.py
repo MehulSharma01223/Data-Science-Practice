@@ -233,3 +233,21 @@ last_two = arr[-2:]
 print("Original Array:", arr)
 print("First 3 elements:", first_three)
 print("Last 2 elements:", last_two)
+
+
+# Q.       Create array [5,12,7,18,3,20]
+#          Extract elements greater than 10
+#          Count how many elements > 10
+
+import numpy as np
+
+a = np.array([5,12,7,18,3,20])
+
+# Extract elements > 10
+b = a[a > 10]
+
+# Count elements > 10
+count = b.size   # ya len(b)
+
+print("Elements > 10:", b)
+print("Count:", count)
