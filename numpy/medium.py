@@ -299,3 +299,24 @@ last = A[-1]
 A[1:] = A[:-1]
 A[0] = last
 print(A)
+
+
+
+# =========================
+# Day 6
+# =========================
+
+#  Q.      Create a (4×5) array
+#          Extract first 2 rows
+#          From those rows, extract values > 50
+
+import numpy as np
+
+a = np.random.randint(1,100,(4,5))
+
+first_two = a[:2, :]
+result = first_two[first_two > 50]
+
+print("Array:\n", a)
+print("First 2 rows:\n", first_two)
+print("Values > 50:\n", result)
