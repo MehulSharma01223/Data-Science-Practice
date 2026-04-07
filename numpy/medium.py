@@ -320,3 +320,22 @@ result = first_two[first_two > 50]
 print("Array:\n", a)
 print("First 2 rows:\n", first_two)
 print("Values > 50:\n", result)
+
+
+#  Q.        Create array [10,15,20,25,30,35]
+#            Find indices where value is divisible by 5
+#            Replace those values with their square
+
+
+import numpy as np
+
+a = np.array([10,15,20,25,30,35])
+
+# Find indices where value is divisible by 5
+indices = np.where(a % 5 == 0)
+
+# Replace those values with their square
+a[indices] = a[indices] ** 2
+
+print("Updated array:", a)
+
