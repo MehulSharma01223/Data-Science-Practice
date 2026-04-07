@@ -206,3 +206,30 @@ for i in a:
 unique = np.array(unique)
 
 print("Unique array:", unique)
+
+
+
+
+# =========================
+# Day 6
+# =========================
+
+
+# Q.    Create array [10,20,30,40,50,60]
+#       Extract first 3 elements
+#       Extract last 2 elements
+
+import numpy as np
+
+# Create array
+arr = np.array([10, 20, 30, 40, 50, 60])
+
+# Extract first 3 elements
+first_three = arr[:3]
+
+# Extract last 2 elements
+last_two = arr[-2:]
+
+print("Original Array:", arr)
+print("First 3 elements:", first_three)
+print("Last 2 elements:", last_two)
