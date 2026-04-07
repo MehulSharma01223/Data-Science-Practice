@@ -245,9 +245,26 @@ a = np.array([5,12,7,18,3,20])
 
 # Extract elements > 10
 b = a[a > 10]
-
 # Count elements > 10
 count = b.size   # ya len(b)
-
 print("Elements > 10:", b)
 print("Count:", count)
+
+
+# Q.     Create array [100,200,300,400,500]
+#        Print element at index 2
+#        Replace element at index 3 with 999
+
+import numpy as np
+
+a = np.array([100,200,300,400,500])
+
+# Print element at index 2
+print(a[2])
+
+# Replace element at index 3 with 999
+a[3] = 999
+
+print(a)
+
+feat(numpy): implement boolean masking to filter and count elements greater than 10
