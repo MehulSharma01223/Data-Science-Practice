@@ -339,3 +339,22 @@ a[indices] = a[indices] ** 2
 
 print("Updated array:", a)
 
+
+# Q.      Create a (5×5) array
+#         Extract center 3×3 submatrix
+#         Find sum of that submatrix
+
+import numpy as np
+
+# Create (5x5) array
+a = np.arange(1, 26).reshape(5,5)
+
+# Extract center 3x3 submatrix
+sub = a[1:4, 1:4]
+
+# Find sum
+total = np.sum(sub)
+
+print("Array:\n", a)
+print("Center 3x3:\n", sub)
+print("Sum:", total)
