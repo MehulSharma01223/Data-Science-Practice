@@ -307,3 +307,16 @@ a[a % 3 == 0] = 0
 
 print("Divisible by 3:", b)
 print("Updated array:", a)
+
+#  Q.     Create array [100,200,300,400,500]
+#         Swap elements at index 1 and index 3
+
+import numpy as np
+
+a = np.array([100,200,300,400,500])
+
+last = a[3]
+a[3] = a[1]
+a[1] = last
+
+print(a)
