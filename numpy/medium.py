@@ -404,5 +404,16 @@ print("Extracted:", b)
 print("Updated array:", a)
 
 
+#  Q.      Create a (5×5) array
+#          Replace elements where:
+#          row index == column index
+#          Replace with 999
 
+import numpy as np
 
+a = np.arange(1,26).reshape(5,5)
+
+idx = np.diag_indices(5)
+a[idx] = 999
+
+print(a)
