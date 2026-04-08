@@ -207,9 +207,6 @@ unique = np.array(unique)
 
 print("Unique array:", unique)
 
-
-
-
 # =========================
 # Day 6
 # =========================
@@ -267,4 +264,27 @@ a[3] = 999
 
 print(a)
 
-feat(numpy): implement boolean masking to filter and count elements greater than 10
+
+
+# =========================
+# Day 7
+# =========================
+
+# Q.     Create array [10,20,30,40,50,60]
+#        Extract elements from index 1 to 4
+#        Reverse that sliced part
+
+import numpy as np
+
+# Create array
+a = np.array([10,20,30,40,50,60])
+
+# Extract elements from index 1 to 4
+sliced = a[1:5]
+
+# Reverse that sliced part
+reversed_part = sliced[::-1]
+
+print("Original Array:", a)
+print("Sliced Part:", sliced)
+print("Reversed Part:", reversed_part)
