@@ -209,7 +209,6 @@ print("Anti-diagonal:", anti)
 print("Difference:", diff)
 
 
-
 # =========================
 # Day 4
 # =========================
@@ -358,3 +357,27 @@ total = np.sum(sub)
 print("Array:\n", a)
 print("Center 3x3:\n", sub)
 print("Sum:", total)
+
+
+# =========================
+# Day 7
+# =========================
+
+#  Q.      Create a (4×4) array
+#          Extract last 2 rows
+#          Reverse column order of those rows
+
+import numpy as np
+
+a = np.random.randint(1,40,(4,4))
+
+# Extract last 2 rows
+last_two = a[2:, :]
+
+# Reverse column order of those rows
+result = last_two[:, ::-1]
+
+print("Array:\n", a)
+print("Last 2 rows:\n", last_two)
+print("Final Result:\n", result)
+
