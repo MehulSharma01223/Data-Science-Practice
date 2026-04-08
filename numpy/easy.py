@@ -270,6 +270,7 @@ print(a)
 # Day 7
 # =========================
 
+
 # Q.     Create array [10,20,30,40,50,60]
 #        Extract elements from index 1 to 4
 #        Reverse that sliced part
@@ -283,8 +284,26 @@ a = np.array([10,20,30,40,50,60])
 sliced = a[1:5]
 
 # Reverse that sliced part
+
 reversed_part = sliced[::-1]
 
 print("Original Array:", a)
 print("Sliced Part:", sliced)
 print("Reversed Part:", reversed_part)
+
+# Q.     Create array [5,12,7,18,3,20]
+#        Extract values divisible by 3
+#        Replace those values with 0
+
+import numpy as np
+
+a = np.array([5,12,7,18,3,20])
+
+# Extract values divisible by 3
+b = a[a % 3 == 0]
+
+# Replace those values with 0
+a[a % 3 == 0] = 0
+
+print("Divisible by 3:", b)
+print("Updated array:", a)
