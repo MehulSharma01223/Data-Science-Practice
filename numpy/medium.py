@@ -381,3 +381,28 @@ print("Array:\n", a)
 print("Last 2 rows:\n", last_two)
 print("Final Result:\n", result)
 
+
+#  Q.       Create array [10,25,30,45,50,65]
+#     Extract values:
+#         greater than 20 AND less than 60
+#         Replace them with -1
+
+import numpy as np
+
+a = np.array([10,25,30,45,50,65])
+
+# Condition (IMPORTANT: parentheses)
+mask = (a > 20) & (a < 60)
+
+# Extract values
+b = a[mask]
+
+# Replace in original array
+a[mask] = -1
+
+print("Extracted:", b)
+print("Updated array:", a)
+
+
+
+
