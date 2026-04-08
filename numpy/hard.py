@@ -236,3 +236,25 @@ odd_cols = a[:, 1::2]
 
 print("\nEven Rows:\n", even_rows)
 print("\nOdd Columns:\n", odd_cols)
+
+
+
+# =========================
+# Day 7
+# =========================
+
+
+#  Q.     Create a (6×6) array
+#         Extract elements where:
+#         value > 20 AND value < 80 AND divisible by 5
+#         Replace them with negative
+
+import numpy as np
+
+a = np.random.randint(1,100,(6,6))
+
+mask = (a > 20) & (a < 80) & (a % 5 == 0)
+
+a[mask] = -a[mask]
+
+print(a)
