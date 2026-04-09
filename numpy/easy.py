@@ -320,3 +320,26 @@ a[3] = a[1]
 a[1] = last
 
 print(a)
+
+
+
+# =========================
+# Day 8
+# =========================
+
+#  Q.     Create array [10,20,30,40,50]
+# Extract elements from index 1 to 3
+# Reverse that extracted part
+
+import numpy as np
+
+a = np.array([10,20,30,40,50])
+
+# Extract index 1 to 3
+part = a[1:4]
+
+# Reverse that part
+reversed_part = part[::-1]
+
+print("Extracted:", part)
+print("Reversed:", reversed_part)
