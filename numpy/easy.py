@@ -343,3 +343,22 @@ reversed_part = part[::-1]
 
 print("Extracted:", part)
 print("Reversed:", reversed_part)
+
+#  Q.   Create array [5,12,7,18,3,20]
+#    Extract all even numbers
+#    Count how many even numbers are present
+
+import numpy as np
+
+z = np.array([5,12,7,18,3,20])
+
+m = (z % 2 == 0)
+
+# Extract even numbers
+even = z[m]
+
+# Count
+count = np.sum(m)
+
+print("Even numbers:", even)
+print("Count:", count)
