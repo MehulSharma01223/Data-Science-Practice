@@ -439,3 +439,21 @@ mask = (a % 5 == 0)
 a[mask] = a[mask] // 2   # ya /2 (float ke liye)
 
 print(a)
+
+#  Q.  Create a (5×5) array
+
+# Extract last 3 columns
+# Reverse the order of rows in that sliced part
+# Print only that modified slice
+
+import numpy as np
+
+a = np.random.randint(1,100,(5,5))
+
+# Extract last 3 columns
+slice_part = a[:, -3:]
+
+# Reverse rows of that slice
+result = slice_part[::-1, :]
+
+print(result)
