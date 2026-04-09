@@ -417,3 +417,25 @@ idx = np.diag_indices(5)
 a[idx] = 999
 
 print(a)
+
+
+
+# =========================
+# Day 7
+# =========================
+
+#  Q. Create array [12,25,37,40,55,60,72]
+# Find indices where value is divisible by 5
+# Replace those values with their half
+
+import numpy as np
+
+a = np.array([12,25,37,40,55,60,72])
+
+# Find indices where value is divisible by 5
+mask = (a % 5 == 0)
+
+# Replace those values with their half
+a[mask] = a[mask] // 2   # ya /2 (float ke liye)
+
+print(a)
