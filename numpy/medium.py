@@ -457,3 +457,25 @@ slice_part = a[:, -3:]
 result = slice_part[::-1, :]
 
 print(result)
+
+#  Q. Create a (4×6) array
+
+# Extract values where:
+# value > 30 AND value is even
+# Count how many such elements are present
+# Replace those values with 999
+
+import numpy as np
+
+a = np.random.randint(1,50,(4,6))
+
+mask = (a > 30) & (a % 2 == 0)
+
+# Count elements
+count = np.sum(mask)
+
+# Replace values
+a[mask] = 999
+
+print("Count:", count)
+print("Updated array:\n", a)
