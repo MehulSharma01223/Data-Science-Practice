@@ -362,3 +362,26 @@ count = np.sum(m)
 
 print("Even numbers:", even)
 print("Count:", count)
+
+
+# =========================
+# Day 9
+# =========================
+
+
+# Create array [2,4,6,8,10,12]
+# Extract first 4 elements
+# Extract last 3 elements
+
+import numpy as np
+
+a = np.array([2,4,6,8,10,12])
+
+# Extract first 4 elements
+first_four = a[:4]
+
+# Extract last 3 elements
+last_three = a[-3:]
+
+print("First 4 elements:", first_four)
+print("Last 3 elements:", last_three)
