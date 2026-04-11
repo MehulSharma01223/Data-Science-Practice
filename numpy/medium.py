@@ -479,3 +479,28 @@ a[mask] = 999
 
 print("Count:", count)
 print("Updated array:\n", a)
+
+
+
+# =========================
+# Day 10
+# =========================
+
+
+# Create array [10,15,20,25,30,35,40]
+# Extract values divisible by 10
+# Replace those values with their square
+
+import numpy as np
+
+a = np.array([10,15,20,25,30,35,40])
+
+# Extract values divisible by 10
+mask = (a % 10 == 0)
+values = a[mask]
+
+# Replace those values with their square
+a[mask] = a[mask] ** 2
+
+print("Values divisible by 10:", values)
+print("Updated array:", a)
