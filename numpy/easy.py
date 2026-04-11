@@ -407,3 +407,21 @@ last_three = a[-3:]
 
 print(first_four)
 print(last_three)
+
+
+# Create array [11,22,33,44,55]
+# Extract values greater than 30
+# Count how many values satisfy this condition
+
+import numpy as np
+
+a = np.array([11,22,33,44,55])
+
+# Extract values > 30
+filtered = a[a > 30]
+
+# Count how many
+count = np.sum(a > 30)
+
+print("Values > 30:", filtered)
+print("Count:", count)
