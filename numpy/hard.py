@@ -303,3 +303,26 @@ a[:3, :3] = bottom_right
 a[3:, 3:] = top_left
 
 print(a)
+
+
+# Create a (5×5) array
+# Replace elements where:
+#  row index > column index → put 1
+#  row index < column index → put -1
+#  row index == column index → keep original
+
+import numpy as np
+
+# Create (5x5) array
+a = np.arange(1,26).reshape(5,5)
+
+n = a.shape[0]
+
+# Get row & column indices
+rows, cols = np.indices((n, n))
+
+# Apply conditions
+a[rows > cols] = 1
+a[rows < cols] = -1
+
+print(a)
