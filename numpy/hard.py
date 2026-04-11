@@ -282,3 +282,24 @@ mask = (a > 30) & (a < 80) & (a % 4 == 0)
 a[mask] = -(a[mask] ** 2)
 
 print("Updated array:\n", a)
+
+
+# Create a (6×6) array
+# Extract top-left 3×3 block
+# Extract bottom-right 3×3 block
+# Swap both blocks in the original array
+
+import numpy as np
+
+# Create (6x6) array
+a = np.arange(1,37).reshape(6,6)
+
+# Extract blocks
+top_left = a[:3, :3].copy()
+bottom_right = a[3:, 3:].copy()
+
+# Swap blocks
+a[:3, :3] = bottom_right
+a[3:, 3:] = top_left
+
+print(a)
