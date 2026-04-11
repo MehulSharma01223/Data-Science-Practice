@@ -506,7 +506,7 @@ print("Values divisible by 10:", values)
 print("Updated array:", a)
 
 
-# Create a (4×5) array
+#  Q.  Create a (4×5) array
 # Extract middle 2 rows
 # From those rows, extract last 3 columns
 
@@ -523,3 +523,23 @@ result = rows[:, -3:]
 
 print("Array:\n", a)
 print("Result:\n", result)
+
+
+# Create array [5,10,15,20,25,30]
+# Find indices where value is greater than 15
+# Replace those values with -1
+
+
+import numpy as np
+
+a = np.array([5,10,15,20,25,30])
+
+# Find indices where value > 15
+indices = np.where(a > 15)
+
+# Replace those values with -1
+a[indices] = -1
+
+print("Indices:", indices)
+print("Updated array:", a)
+
