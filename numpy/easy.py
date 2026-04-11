@@ -409,7 +409,7 @@ print(first_four)
 print(last_three)
 
 
-# Create array [11,22,33,44,55]
+#  Q.  Create array [11,22,33,44,55]
 # Extract values greater than 30
 # Count how many values satisfy this condition
 
@@ -425,3 +425,21 @@ count = np.sum(a > 30)
 
 print("Values > 30:", filtered)
 print("Count:", count)
+
+
+#  Q. Create array [5,10,15,20,25]
+# Replace first element with 0
+# Replace last element with 100
+
+
+import numpy as np
+
+a = np.array([5,10,15,20,25])
+
+# Replace first element
+a[0] = 0
+
+# Replace last element
+a[-1] = 100
+
+print(a)
