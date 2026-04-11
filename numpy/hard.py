@@ -258,3 +258,27 @@ mask = (a > 20) & (a < 80) & (a % 5 == 0)
 a[mask] = -a[mask]
 
 print(a)
+
+
+
+# =========================
+# Day 10
+# =========================
+
+# Create a (5×5) array
+# Extract values where:
+# value > 30 AND value < 80 AND divisible by 4
+# Replace those values with their negative square
+
+import numpy as np
+
+# Create (5x5) array
+a = np.random.randint(1,100,(5,5))
+
+# Condition
+mask = (a > 30) & (a < 80) & (a % 4 == 0)
+
+# Replace with negative square
+a[mask] = -(a[mask] ** 2)
+
+print("Updated array:\n", a)
