@@ -504,3 +504,22 @@ a[mask] = a[mask] ** 2
 
 print("Values divisible by 10:", values)
 print("Updated array:", a)
+
+
+# Create a (4×5) array
+# Extract middle 2 rows
+# From those rows, extract last 3 columns
+
+import numpy as np
+
+# Create (4x5) array
+a = np.arange(1,21).reshape(4,5)
+
+# Extract middle 2 rows
+rows = a[1:3, :]
+
+# From those rows, extract last 3 columns
+result = rows[:, -3:]
+
+print("Array:\n", a)
+print("Result:\n", result)
