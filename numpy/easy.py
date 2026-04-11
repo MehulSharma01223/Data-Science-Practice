@@ -385,3 +385,25 @@ last_three = a[-3:]
 
 print("First 4 elements:", first_four)
 print("Last 3 elements:", last_three)
+
+
+# =========================
+# Day 10
+# =========================
+
+#  Q, Create array [2,4,6,8,10,12]
+# Extract first 4 elements
+# Extract last 3 elements
+
+import numpy as np
+
+a = np.array([2,4,6,8,10,12])
+
+# First 4 elements
+first_four = a[:4]
+
+# Last 3 elements
+last_three = a[-3:]
+
+print(first_four)
+print(last_three)
