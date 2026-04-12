@@ -1,16 +1,19 @@
-# Data-Science-Practice
-This repository contains my Data Science practice using NumPy and Pandas.
-# Data Science Practice
+# 🚀 Data Science Journey
 
-This repository contains my daily practice of Data Science.
+## 📌 Skills
+- NumPy (Vectorization, Broadcasting)
+- Pandas (Cleaning, Filtering, Groupby)
+- Data Analysis Projects
 
-## Topics Covered
-- NumPy
-- Pandas (coming soon)
-- Data Visualization
+## 📊 Projects
+- Sales Analysis
+- Data Cleaning Pipeline
+- Student Performance Analysis
 
-## Goal
-To become a Data Analyst / Data Scientist.
+## 🎯 Goal
+To become a Data Scientist
 
-## Progress
-- Day 1: NumPy basic questions
+## 📅 Progress
+- ✅ NumPy Basics
+- ✅ Vectorization
+- 🔄 Pandas Learning
