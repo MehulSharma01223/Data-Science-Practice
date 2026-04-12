@@ -19,3 +19,23 @@ print(df.head())
 # Q5: Add new column
 df["Status"] = df["Marks"] > 75
 print(df)
+
+
+
+#  Q. Create a DataFrame with Name and Marks
+#  Print entire DataFrame
+#  Print only Marks column 
+
+import pandas as pd
+
+# Create DataFrame
+df = pd.DataFrame({
+    "Name": ["Aman", "Riya", "Rahul", "Neha"],
+    "Marks": [85, 90, 78, 92]
+})
+
+# Print entire DataFrame
+print(df)
+
+# Print only Marks column
+print(df["Marks"])
