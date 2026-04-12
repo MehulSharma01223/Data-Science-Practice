@@ -326,3 +326,106 @@ a[rows > cols] = 1
 a[rows < cols] = -1
 
 print(a)
+
+
+
+# =========================
+# Day 11
+# =========================
+
+
+# Q.  Create a (6×6) array
+#  Replace:
+# upper triangle → 0
+# lower triangle → 1
+# diagonal → keep original
+
+import numpy as np
+
+a = np.random.randint(1,70,(6,6))
+n = a.shape[0]
+row, col = np.indices((n,n))
+
+print("Original:\n", a)
+
+a[row < col] = 0   # upper triangle
+a[row > col] = 1   # lower triangle
+
+print("\nModified:\n", a)
+
+# Q2
+# Create a (5×5) array
+# Rotate the matrix 90° clockwise
+# Then extract center 3×3
+# Find sum of that submatrix
+
+
+import numpy as np
+
+a = np.random.randint(1,50,(5,5))
+print("Original:\n", a)
+
+# Step 1: Rotate
+rot = np.rot90(a, -1)
+print("\nRotated:\n", rot)
+
+# Step 2: Center 3x3 extract
+center = rot[1:4, 1:4]
+print("\nCenter 3x3:\n", center)
+
+# Step 3: Sum
+print("\nSum:", np.sum(center))
+
+
+# Without using any loops:
+# Har element ke liye:
+# Agar element row mean se bada hai → 1
+# Agar element row mean ke equal ya chhota hai → 0
+
+
+import numpy as np
+
+a = np.random.randint(1,10,(3,3))
+print("Original:\n", a)
+
+b = np.mean(a, axis=1, keepdims=True)   # ✅ fix
+
+a[a > b] = 1
+a[a <= b] = 0
+
+print("\nResult:\n", a)
+
+
+
+# Q. Create a (4×5) random matrix a
+#   Without using any loops:
+#      Conditions:
+# Har element ke liye:
+# Agar element column mean se bada hai → +10
+# Agar element column mean ke equal ya chhota hai → -10
+# Uske baad:
+# Har row ka maximum element = 0 kar do
+# Final output: modified matrix
+
+
+
+
+import numpy as np
+
+# Step 0: Create matrix
+a = np.random.randint(1, 60, (4,5))
+print("Original:\n", a)
+
+# Step 1: Column mean
+col_mean = np.mean(a, axis=0, keepdims=True)
+
+# Step 2: Apply condition (+10 / -10)
+a = np.where(a > col_mean, a + 10, a - 10)
+
+print("\nAfter Condition:\n", a)
+
+# Step 3: Row-wise max → 0
+row_max_idx = np.argmax(a, axis=1)
+a[np.arange(a.shape[0]), row_max_idx] = 0
+
+print("\nFinal Output:\n", a)
