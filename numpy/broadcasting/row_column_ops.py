@@ -4,3 +4,9 @@ a = np.array([[1,2,3],[4,5,6]])
 
 row_add = a + np.array([10,20,30])
 print(row_add)
+
+
+a = np.random.randint(1,100,(4,4))
+
+print(a.sum(axis=0))
+print(a.prod(axis=1))
