@@ -79,3 +79,24 @@ right = c[1:-1, -1]
 border_sum = top.sum() + bottom.sum() + left.sum() + right.sum()
 
 print("\nBorder Sum:", border_sum)
+
+#  Q 6.)
+
+
+arr2 = np.random.randint(1, 50, (5, 5))
+print("Original Array:\n", arr2)
+
+# Step 1: row-wise mean
+row_mean = arr2.mean(axis=1, keepdims=True)
+
+# Step 2: condition apply (> row mean → 1 else 0)
+binary = np.where(arr2 > row_mean, 1, 0)
+print("\nBinary Matrix:\n", binary)
+
+# Step 3: column-wise max index
+col_max_idx = np.argmax(binary, axis=0)
+
+# Step 4: set those positions = -1
+binary[col_max_idx, np.arange(binary.shape[1])] = -1
+
+print("\nFinal Result:\n", binary)
