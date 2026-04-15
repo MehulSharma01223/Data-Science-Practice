@@ -41,3 +41,19 @@ arr3[msk] = -1
 print("Extracted:", new)
 print("Updated:", arr3)
 print("Count:", co)
+
+
+#  Q 4.)
+arr4 = np.array([5,12,7,18,3,20])
+
+print("Original : ",arr4)
+
+you = arr4 % 3 == 0 
+y = arr4[you]
+
+arr4[you] = 0
+
+c = np.where(you)
+print("values : ",y)
+print("updated :",arr4)
+print("Indices : ",c)
