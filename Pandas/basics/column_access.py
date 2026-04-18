@@ -20,7 +20,7 @@ print(df["Name"])
 
 # multple line access
 
-print(df [["Name"],["Marks"]])
+print(df [["Name","Marks"]])
 
 #  add new line
 
