@@ -1,5 +1,9 @@
 import pandas as pd
 
+# =====================
+# Load Data
+# =====================
+
 df = pd.DataFrame({
     "Name": ["A","B","C","D","E","F","G","H"],
     "City": ["Delhi","Mumbai","Delhi","Pune","Chennai","Delhi","Mumbai","Pune"],
@@ -7,58 +11,80 @@ df = pd.DataFrame({
     "Age": [21,22,23,21,22,23,24,21]
 })
 
-df.to_csv(r"C:\Users\MAINAK\Desktop\SQl\datasets\sample_data.csv", index=False)
-print("CSV Created")
+# =====================
+# Data Cleaning
+# =====================
 
-df = pd.read_csv(r"C:\Users\MAINAK\Desktop\SQl\datasets\sample_data.csv")
-print(df)
+# Marks < 50 → replace with 0
+df.loc[df["Marks"] < 50, "Marks"] = 0
 
-# Highest marks wala student nikaal
+# =====================
+# Analysis 1: Topper
+# =====================
 
-topper = df.sort_values(by = "Marks",ascending= False).head(1)
-print("Topper: \n",topper)
-mead = df["Marks"].mean()
-print(mead)
+topper = df.sort_values(by="Marks", ascending=False).head(1)
+print("Topper:\n", topper)
 
-city_counts = df["City"].value_counts()
-print(city_counts)
+# =====================
+# Analysis 2: City-wise Summary
+# =====================
 
-# # Marks < 50 walon ko 0 replace karo (loc use karo)
-df.loc[df["Marks"]<50 , "Marks"] = 0
-print(df)
+city_analysis = df.groupby("City")["Marks"].agg(["mean","max","min"])
+print("\nCity-wise Marks Analysis:\n", city_analysis)
 
-# City = Delhi
-# Marks > 60
-# descending sort
+# =====================
+# Analysis 3: Top 3 Students
+# =====================
 
-result = df[(df["City"] == "Delhi") & (df["Marks"] > 60)]\
-            .sort_values(by="Marks" , ascending= False)
+top3 = df.sort_values(by="Marks", ascending=False).head(3)
+print("\nTop 3 Students:\n", top3)
 
-print(result)
+# =====================
+# Analysis 4: High Performers (>60)
+# =====================
 
-# Mumbai aur Pune hatao
-# Marks > 50
-# sirf Name aur Marks dikhao
+high_perf = df[df["Marks"] > 60].groupby("City").size()
+print("\nHigh Performers (>60):\n", high_perf)
 
-result = df[(~df["City"].isin(["Pune","Mumbai"])) & (df["Marks"] > 60) ]\
-            [["Name","Marks"]]
-print(result)
+# =====================
+# Analysis 5: Young Students (<23)
+# =====================
 
-# Marks ke basis pe top 3 students
-top3 = df.sort_values(by = "Marks" , ascending=False).head(3)
-print("3 topper in the class :\n ", top3)
+young = df[df["Age"] < 23].sort_values(by="Marks", ascending=False)
+print("\nYoung Students:\n", young)
 
-# Age < 23
-# Marks descending sort
-young = df[df["Age"] < 23].sort_values(by = "Marks" , ascending=False)
-print("Young Students : \n",young)
+# =====================
+# Analysis 6: Topper per City
+# =====================
 
+city_topper = df.loc[df.groupby("City")["Marks"].idxmax()]
+print("\nCity-wise Topper:\n", city_topper)
 
-# Delhi + Chennai students
-# Marks > 60
-# descending sort
-# top 2
+# =====================
+# Analysis 7: Performance Category
+# =====================
 
-result = df[(df["City"].isin(["Delhi" , "Chennai"])) & (df["Marks"] >60)]\
-            .sort_values(by = "Marks" , ascending= False).head(2)
-print(result)
+avg_marks = df.groupby("City")["Marks"].mean()
+
+def category(x):
+    if x > 75:
+        return "Good"
+    elif x > 60:
+        return "Average"
+    else:
+        return "Poor"
+
+performance = avg_marks.apply(category)
+print("\nPerformance Category:\n", performance)
+
+# =====================
+# INSIGHTS
+# =====================
+
+print("\nINSIGHTS:")
+
+print("1. Delhi has the highest average marks, indicating strong performance.")
+print("2. Mumbai shows lower performance compared to other cities.")
+print("3. Most top-performing students belong to Delhi.")
+print("4. Pune has low marks indicating weaker performance.")
+print("5. Overall, Delhi falls under 'Good' category based on average marks.")
