@@ -16,10 +16,29 @@ print(df.groupby("City")["Marks"].agg(["mean","max","min"]))
 # Q2: City-wise Marks ka sum aur count
 
 print(df.groupby("City").agg({
-    "Marks": ["sum","count"]
-}))
+     "Marks": ["sum","count"]
+ }))
 
 # Q3: City-wise Age ka min aur max
 
 print(df.groupby("City")["Age"].agg(["min","max"]))
+
+
+
+
+# Q4: City-wise → Marks (mean, max) + Age (mean)
+print(df.groupby("City").agg({
+    "Marks":["mean","max"],
+    "Age":["mean"]
+}))
+
+
+# Q5: City-wise unique Names count (nunique use karo)
+print(df.groupby("City")["Name"].nunique())
+
+# Q6: City-wise → Marks sum + Age max
+print(df.groupby("City").agg({
+    "Marks" : ["sum"],
+    "Age": ["max"]
+}))
 
