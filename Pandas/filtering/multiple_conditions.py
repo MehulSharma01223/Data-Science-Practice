@@ -17,3 +17,4 @@ print(df[df["Marks"].between(70, 90)])
 
 #  Query type
 print(df.query("Marks > 70 and Age < 23"))
+print(df.shape)
