@@ -62,3 +62,37 @@ plt.title("Top 3 Students")
 plt.ylabel("Marks")
 plt.xlabel("Students Name")
 plt.show()
+
+
+#  Q1: Sirf Delhi aur Mumbai ke students ka marks bar chart banao
+
+df[df["City"].isin(["Delhi","Mumbai"])]\
+    .groupby("City")["Marks"].mean().plot(kind = "bar" , color = "pink")
+
+plt.title("City wise average marks")
+plt.ylabel("Average Marks")
+plt.xlabel("City")
+plt.show()
+
+
+#  Q2.) 60 se upar marks wale students ka city-wise count graph banao
+
+df[df["Marks"] > 60 ]\
+    .groupby("City").size()\
+    .plot(kind = "bar" , color = "yellow")
+
+plt.title("students name city wise")
+plt.ylabel(" Student Name")
+plt.xlabel("City")
+plt.show()
+
+
+# Q 3. ) Q3: Marks ka histogram banao
+
+df["Marks"].plot(kind = "hist" , color = "yellow")
+
+plt.title("Marks Distribution")
+plt.xlabel("Marks")
+plt.ylabel("Frequency")
+
+plt.show()
