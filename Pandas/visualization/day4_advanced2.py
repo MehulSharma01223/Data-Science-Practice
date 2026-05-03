@@ -79,12 +79,40 @@ plt.show()
 
 
 plt.scatter(df["Age"], df["Marks"], color="blue")
-
 for i in range(len(df)):
     plt.text(df["Age"][i], df["Marks"][i], df["Name"][i])
 
 plt.title("Marks vs Age")
 plt.xlabel("Age")
+plt.ylabel("Marks")
+
+plt.show()
+
+# Q19: Top 5 students ka comparison graph banao
+
+# Requirement:
+# 1. Marks ko descending sort karo
+# 2. Top 5 students select karo
+# 3. Graph banao
+
+# Graph:
+# X-axis → Name
+# Y-axis → Marks
+
+# Insight:
+# → kaun highest scorer hai?
+# → marks gap kaisa hai (close hai ya difference zyada hai)
+
+top5 = df.sort_values(by = "Marks", ascending= False).head(5)
+top5.plot(
+    kind="bar",
+    x="Name",
+    y="Marks",
+    color="pink"
+)
+
+plt.title("Top 5 Students Comparison")
+plt.xlabel("Student Name")
 plt.ylabel("Marks")
 
 plt.show()
