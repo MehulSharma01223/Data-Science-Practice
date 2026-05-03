@@ -66,3 +66,25 @@ plt.title("City-wise Total Marks Distribution")
 plt.ylabel("")
 
 plt.show()
+
+
+# Q18: Marks vs Age scatter plot banao
+
+# Requirement:
+# 1. X-axis → Age
+# 2. Y-axis → Marks
+# 3. Scatter plot banao
+# 4. Graph dekh ke insight likho:
+#    → Age badhne par marks increase ho rahe hain ya random pattern hai?
+
+
+plt.scatter(df["Age"], df["Marks"], color="blue")
+
+for i in range(len(df)):
+    plt.text(df["Age"][i], df["Marks"][i], df["Name"][i])
+
+plt.title("Marks vs Age")
+plt.xlabel("Age")
+plt.ylabel("Marks")
+
+plt.show()
