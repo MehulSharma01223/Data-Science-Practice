@@ -45,3 +45,24 @@ percentage.plot(
 )
 plt.show()
 
+
+# Q2 : City-wise total marks ka pie chart banao
+
+# Requirement:
+# 1. City ke basis par Marks ka sum nikaalo
+# 2. Pie chart banao
+
+# Labels → City
+# Values → Total Marks
+
+city_total = df.groupby("City")["Marks"].sum()
+
+city_total.plot(
+    kind="pie",
+    autopct="%1.1f%%"
+)
+
+plt.title("City-wise Total Marks Distribution")
+plt.ylabel("")
+
+plt.show()
