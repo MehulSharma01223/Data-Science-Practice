@@ -214,3 +214,31 @@ plt.title("City-wise Student Count vs Average Marks")
 plt.xlabel("City")
 
 plt.show()
+
+# Q23: Young vs Old students ka marks comparison graph banao
+
+# Goal:
+# Check karo → young students better perform karte hain ya old?
+
+# Step 1: Group create
+df["Group"] = df["Age"].apply(lambda x: "Young" if x < 23 else "Old")
+
+# Step 2: Average marks
+group_avg = df.groupby("Group")["Marks"].mean()
+
+print(group_avg)
+
+# Step 3: Graph
+group_avg.plot(
+    kind="bar",
+    color=["green", "orange"]
+)
+
+plt.title("Young vs Old Students Performance")
+plt.xlabel("Group")
+plt.ylabel("Average Marks")
+
+plt.show()
+
+
+
