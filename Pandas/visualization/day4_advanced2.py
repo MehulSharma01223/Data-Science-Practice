@@ -156,3 +156,27 @@ plt.xlabel("Performance Category")
 plt.ylabel("Number of Cities")
 
 plt.show()
+
+
+# Q21: Marks distribution ko histogram + mean line ke saath show karo
+
+# Requirement:
+# 1. Marks ka histogram banao
+# 2. Average (mean) calculate karo
+# 3. Graph me ek vertical line add karo (mean dikhane ke liye)
+
+# Graph:
+# X-axis → Marks
+# Y-axis → Frequency
+
+df["Marks"].plot(kind="hist", color="yellow")
+
+mean = df["Marks"].mean()
+
+plt.axvline(mean, color="red", linewidth=2)
+
+plt.title("Marks Distribution with Mean Line")
+plt.xlabel("Marks")
+plt.ylabel("Frequency")
+
+plt.show()
