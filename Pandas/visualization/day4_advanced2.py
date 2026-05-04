@@ -180,3 +180,37 @@ plt.xlabel("Marks")
 plt.ylabel("Frequency")
 
 plt.show()
+
+#   Q22: City-wise student count vs average marks ka comparison graph banao
+
+# Goal:
+# Check karo → kya jahan students zyada hain wahan performance better hai?
+count = df.groupby("City").size()
+
+# Step 2: Average
+avg = df.groupby("City")["Marks"].mean()
+
+# Step 3: Combine
+combined = pd.DataFrame({
+    "Count": count,
+    "Average": avg
+})
+
+print(combined)
+
+# Step 4: Plot (Dual Axis)
+fig, ax1 = plt.subplots()
+
+ax2 = ax1.twinx()
+
+combined["Count"].plot(kind="bar", color="skyblue", ax=ax1, position=0)
+combined["Average"].plot(kind="bar", color="orange", ax=ax2, position=1)
+
+# Labels
+ax1.set_ylabel("Student Count")
+ax2.set_ylabel("Average Marks")
+
+plt.title("City-wise Student Count vs Average Marks")
+plt.xlabel("City")
+
+plt.show()
