@@ -38,3 +38,30 @@ print(df)
 df["Group"] = df["Age"].apply(lambda x: "Young" if x < 23 else "Old")
 
 print(df)
+
+# Marks ko 4 range me divide karo:
+# 0-40
+# 40-60
+# 60-80
+# 80-100
+
+bins = [0, 40, 60, 80, 100]
+labels = ["0-40", "40-60", "60-80", "80-100"]
+
+df["Marks_Range"] = pd.cut(df["Marks"], bins=bins, labels=labels)
+
+print(df)
+
+# Check that which range people 
+
+range_count = df["Marks_Range"].value_counts()
+print(range_count)
+
+#  to graph presentation
+range_count.plot(kind="bar", color="purple")
+
+plt.title("Marks Distribution by Range")
+plt.xlabel("Marks Range")
+plt.ylabel("Number of Students")
+
+plt.show()
