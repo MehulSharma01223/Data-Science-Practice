@@ -116,3 +116,43 @@ plt.xlabel("Student Name")
 plt.ylabel("Marks")
 
 plt.show()
+
+
+# Q20: City-wise performance category (Good / Average / Poor) ka graph banao
+
+# Requirement:
+# 1. City-wise average marks nikaalo
+# 2. Average marks ke basis par category banao:
+#    - mean > 75 → Good
+#    - mean > 60 → Average
+#    - else → Poor
+# 3. Category ka count graph banao
+
+# Graph:
+# X-axis → Performance Category
+# Y-axis → Number of Cities
+
+city_avg = df.groupby("City")["Marks"].mean()
+
+def category(x):
+    if x > 75:
+        return "Good"
+    elif x > 60:
+        return "Average"
+    else:
+        return "Poor"
+
+performance_category = city_avg.apply(category)
+
+print(performance_category)
+
+performance_category.value_counts().plot(
+    kind="bar",
+    color="green"
+)
+
+plt.title("City-wise Performance Category")
+plt.xlabel("Performance Category")
+plt.ylabel("Number of Cities")
+
+plt.show()
