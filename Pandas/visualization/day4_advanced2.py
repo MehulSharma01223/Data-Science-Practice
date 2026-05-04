@@ -242,3 +242,25 @@ plt.show()
 
 
 
+# Q24: Marks ko bins me divide karke graph banao
+
+# Ranges:
+# 0–40
+# 40–60
+# 60–80
+# 80–100
+
+# Goal:
+# Check karo → kaunsi range me sabse zyada students hain
+
+bins = [0,40,60,80 ,100]
+labels = ["0-40", "40-60", "60-80", "80-100"]
+df["Marks_range"] = pd.cut(df["Marks"] , bins = bins , labels = labels)
+range_count = df["Marks_range"].value_counts()
+range_count.plot(kind = "bar" , color = "purple")
+
+plt.title("Marks Distribution by Range")
+plt.xlabel("Marks Range")
+plt.ylabel("Number of Students")
+
+plt.show()
