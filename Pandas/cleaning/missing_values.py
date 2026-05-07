@@ -24,3 +24,23 @@ print(df.isnull().sum().sum())
 # Sirf un rows ko identify karo jaha missing value present hai.
 
 df[df.isnull().any(axis = 1)]
+
+
+
+# Q1. Marks ya City me missing value wali rows print karo
+print(df[df[["Marks" , "City"]].isnull().any(axis = 1)])
+
+# Q2. Har row me kitni missing values hain, new column banao
+
+df["Missing_Count"] = df.isnull().sum(axis=1)
+
+print(df)
+
+#  Q3. Sirf missing values wale columns print karo
+
+print(df.columns[df.isnull().sum() > 0])
+
+# Q4. Har column ka missing percentage nikalo
+
+print((df.isnull().sum() / len(df)) * 100)
+
