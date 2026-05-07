@@ -62,3 +62,46 @@ print(df)
 
 print(df.fillna("Unknown"))
 
+
+# Q1
+
+# Name column ki missing value ko "No Name" se fill karo.
+
+df["Name"].fillna("No Name ")
+
+# Q2
+
+# City column ki missing value ko "Unknown" se fill karo.
+df["City"].fillna("Unknown")
+
+# Q3
+
+# Marks column ki missing value ko Marks ke mean se fill karo.
+df["Marks"].fillna(df["Marks"].mean())
+
+# Q4
+
+# Ek new dataframe banao:
+
+df_filled = df.fillna({
+    "Name": "No Name",
+    "Marks": df["Marks"].mean(),
+    "City": "Unknown"
+})
+
+print(df_filled)
+
+# Q5.
+
+# Check karo: df_filled me abhi bhi missing values bachi hain ya nahi.
+
+print(df_filled.isnull().sum())
+
+# #  Q6.
+# Marks column me missing value ko mean se fill karo, phir uske baad Marks ka average dubara print karo.
+
+print(df["Marks"].mean())
+
+df["Marks"] = df["Marks"].fillna(df["Marks"].mean())
+
+print(df["Marks"].mean())
