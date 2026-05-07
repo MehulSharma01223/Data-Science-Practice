@@ -12,4 +12,21 @@ df = pd.DataFrame({
 # unhe remove karo.
 
 print(df.dropna())
-print(df)
+
+# Marks whale missing value delete kar 
+
+print(df.dropna(subset=["Marks"]))
+
+
+# city aur Name whale missing value delete kar 
+
+print(df.dropna(subset=["Marks" , "Name"]))
+
+# Dataset me:
+
+# jitni rows me missing values hain
+# unhe permanently remove karo.
+
+# Aur updated dataframe print karo.
+
+print(df.dropna(inplace=True))
