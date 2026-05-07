@@ -44,3 +44,21 @@ print(df.columns[df.isnull().sum() > 0])
 
 print((df.isnull().sum() / len(df)) * 100)
 
+
+# #   FILL NA
+
+#  with num 
+print(df.fillna(0))
+
+#  with specific col
+df["Marks"] = df["Marks"].fillna(0)
+print(df)
+
+#  with mean()
+
+df["Marks"] = df["Marks"].fillna(df["Marks"].mean())
+print(df)
+#  with string 
+
+print(df.fillna("Unknown"))
+
