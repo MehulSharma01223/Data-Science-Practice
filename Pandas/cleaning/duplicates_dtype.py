@@ -74,3 +74,38 @@ print(df)
 
 # Count total duplicate Employee_ID values in the dataset
 print(df.duplicated(subset = ["Employee_ID"]).sum())
+
+
+
+#  \\\\\\\\\\\\ D Types \\\\\\\\\\\\\\\\\\\\\\\\
+
+# --------------- Q13. --------------------
+
+# Check data types of all columns in the dataset
+
+print(df.dtypes)
+
+#  ---------------Q14.-------------------
+
+# Check data type of only the Employee_ID column
+
+print(df["Employee_ID"].dtypes)
+
+# ----------------- Q15. -----------------
+
+# Count how many columns are present for each data type
+
+print(df.dtypes.value_counts())
+
+#  -----------------Q16. ---------------
+
+# Show only columns that have object data type
+
+print(df.dtypes[df.dtypes == "object"])
+
+
+#  -----------------Q17. ---------------
+
+# Show only columns that have mumeric data type
+
+print(df.dtypes[df.dtypes != "object"])
