@@ -109,3 +109,68 @@ print(df.dtypes[df.dtypes == "object"])
 # Show only columns that have mumeric data type
 
 print(df.dtypes[df.dtypes != "object"])
+
+
+#  \\\\\\\\\\\\ astypes \\\\\\\\\\\\\\\\\\\\\\\\
+
+#  --------------Q18. -------------
+
+# Convert Employee_ID to string
+
+df["Employee_ID"] = df["Employee_ID"].astype("str")
+
+#  --------------Q19.-------------
+
+# Convert Salary to float
+df["Salary"] = df["Salary"].astype("float")
+
+#  --------------Q19.-------------
+
+# Convert Salary to int
+df["Salary"] = df["Salary"].astype("int")
+
+#  --------------Q20.--------------
+
+# Convert Employee_ID column from integer to string type
+# Permanently update the dataset
+
+df["Employee_ID"] = df["Employee_ID"].astype("str")
+print(df.dtypes)
+
+# ------------  Q21. ---------------
+
+# Convert Employee_ID column back to integer type
+# Permanently update the dataset
+
+df["Employee_ID"] = df["Employee_ID"].astype("int")
+print(df.dtypes)
+
+# ----------- Q.22 ------------
+
+# Convert Employee_ID and Experience columns to float type
+# Permanently update the dataset
+ 
+df[["Employee_ID", "Experience"]] = df[["Employee_ID", "Experience"]].astype("float")
+print(df.dtypes)
+
+# ----------- Q.23 ------------
+
+# Check data types after converting Employee_ID and Experience columns to float
+
+print(df[["Employee_ID", "Experience"]].dtypes)
+
+# ------------ Q 24. ----------
+
+# Convert Name column to string type
+# Permanently update the dataset
+
+df["Name"] = df["Name"].astype("str")
+print(df["Name"].dtypes)
+
+#  ------------ Q 25. ----------
+
+# Convert Employee_ID column to boolean type
+# Check the output after conversion
+
+df["Employee_ID"] = df["Employee_ID"].astype("bool")
+print(df["Employee_ID"].dtypes)
