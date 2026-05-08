@@ -32,3 +32,45 @@ print(df.duplicated(subset = ["Employee_ID"]))
 
 # Show rows where Employee_ID is duplicated
 print(df[df.duplicated(subset = ["Employee_ID"])])
+
+#  -----------Q6. ------------
+
+# Remove duplicate rows from the dataset
+df_duplicates   = df.drop_duplicates()
+
+# ------------Q7. ----------
+
+# Count total rows after removing duplicates
+
+sount_total = len(df)- len(df_duplicates)
+print(sount_total)
+
+#  -----------Q8. ----------
+
+# Remove duplicate Employee_ID records only
+
+print(df.drop_duplicates(subset = ["Employee_ID"]))
+
+#  ----------- Q9. ----------
+
+# Keep only the last duplicate record of Employee_ID
+
+df.drop_duplicates(subset=["Employee_ID"], keep="last")
+
+#  -----------Q10. ------------
+
+# Remove all duplicate Employee_ID records completely
+# Do not keep any repeated IDs
+
+print(df.drop_duplicates(subset=["Employee_ID"], keep=False))
+
+#  -----------Q11.----------
+
+# Permanently remove duplicate Employee_ID records from the dataset
+df.drop_duplicates(subset=["Employee_ID"], inplace= True)
+print(df)
+
+# -------------Q12.--------
+
+# Count total duplicate Employee_ID values in the dataset
+print(df.duplicated(subset = ["Employee_ID"]).sum())
