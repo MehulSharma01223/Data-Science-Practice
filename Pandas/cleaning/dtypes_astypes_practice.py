@@ -105,3 +105,40 @@ print(df["Name"].dtypes)
 
 df["Employee_ID"] = df["Employee_ID"].astype("bool")
 print(df["Employee_ID"].dtypes)
+
+# INDUSTRY QUESTION 1
+# HR reporting system requires Employee_ID as string type
+# Convert Employee_ID column to string
+# Permanently update the dataset
+
+df["Employee_ID"] = df["Employee_ID"].astype("str")
+
+
+# INDUSTRY QUESTION 2
+# Payroll analysis requires Salary column in float format
+# Convert Salary column to float type
+# Permanently update the dataset
+df["Salary"] = df["Salary"].astype("float")
+
+
+# INDUSTRY QUESTION 3
+# Company wants Experience column in integer format
+# Convert Experience column to integer type
+# Permanently update the dataset
+
+df["Experience"] = df["Experience"].fillna(0).astype("int")
+
+
+# INDUSTRY QUESTION 4
+# Reporting dashboard requires Employee_ID and Salary in string format
+# Convert both columns to string type together
+# Permanently update the dataset
+
+df[["Employee_ID", "Salary"]] = df[["Employee_ID", "Salary"]].astype("str")
+
+# INDUSTRY QUESTION 5
+# Employee active status needs boolean format
+# Convert Employee_ID column to boolean type
+# Observe the output after conversion
+
+df["Employee_ID"] = df["Employee_ID"].astype("bool")
