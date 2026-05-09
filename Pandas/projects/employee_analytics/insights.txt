@@ -1,0 +1,41 @@
+EMPLOYEE ANALYTICS PROJECT - INSIGHTS
+
+1. Missing Value Handling:
+   - The dataset contained missing values in Salary, Experience, Department, City, and Performance_Score columns.
+   - These missing values were cleaned using fillna() with appropriate strategies such as mean replacement and string replacement.
+
+2. Duplicate Employee Records:
+   - Duplicate Employee_ID records were identified and removed using drop_duplicates().
+   - This improved dataset accuracy and prevented repeated employee analysis.
+
+3. Data Type Conversion:
+   - Employee_ID was converted into string type because employee IDs are categorical identifiers.
+   - Experience values were converted into integer format for better analysis consistency.
+
+4. Department-wise Salary Analysis:
+   - The IT department showed higher average salary trends compared to some other departments.
+   - Groupby analysis helped compare salary distribution across departments.
+
+5. City-wise Employee Distribution:
+   - Delhi had one of the highest employee counts in the dataset.
+   - City analysis helps understand workforce distribution across locations.
+
+6. Performance Score Distribution:
+   - Most employees fall within the medium-to-high performance score range.
+   - Histogram analysis helped visualize employee performance spread.
+
+7. Salary vs Performance Analysis:
+   - Scatter plot analysis suggests that employees with higher salaries generally tend to have better performance scores.
+   - This helps identify salary-performance relationships.
+
+8. Top Paid Employees:
+   - The highest-paid employees were identified using salary sorting.
+   - This analysis helps highlight top salary brackets within the company.
+
+9. Department Employee Distribution:
+   - Pie chart analysis showed workforce distribution across departments such as HR, IT, and Finance.
+   - IT department had strong employee representation in the dataset.
+
+10. Final Conclusion:
+   - The project demonstrates practical use of Pandas and Matplotlib for real-world employee data analysis.
+   - The workflow included data cleaning, duplicate handling, datatype conversion, aggregation, visualization, and business insight generation.
