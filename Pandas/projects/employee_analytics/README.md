@@ -33,6 +33,19 @@ The project demonstrates a complete beginner-to-intermediate level data analytic
 
 ---
 
+## Project Features
+
+- Real-world employee dataset analysis
+- Missing value handling using Pandas
+- Duplicate record cleaning
+- Data type inspection and conversion
+- Salary and performance analysis
+- Department-wise analytics
+- Employee distribution analysis
+- Data visualization using Matplotlib
+- Business insight generation
+- Professional GitHub project structure
+
 ## Analysis Performed
 
 * Average salary analysis
