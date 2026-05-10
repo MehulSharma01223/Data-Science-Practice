@@ -65,12 +65,19 @@ The project demonstrates a complete beginner-to-intermediate level data analytic
 * Salary and performance show positive relationship patterns.
 * Department-wise analysis helps compare workforce distribution effectively.
 
----
-
 ## Sample Visualizations
 
+### Department-wise Salary Analysis
 ![Department Salary](visuals/department_salary.png)
+
+---
+
+### City-wise Employee Distribution
 ![City Employee Count](visuals/city_employee_count.png)
+
+---
+
+### Salary vs Performance Analysis
 ![Salary vs Performance](visuals/salary_vs_performance.png)
 
 ---
