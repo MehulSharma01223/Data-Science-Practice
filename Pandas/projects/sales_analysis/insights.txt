@@ -1,0 +1,42 @@
+SALES ANALYSIS PROJECT - INSIGHTS
+
+1. City-wise Sales:
+   - Delhi shows strong total sales performance.
+   - Mumbai also contributes significantly to overall revenue.
+   - City-wise sales help identify high-performing markets.
+
+2. Product Performance:
+   - Laptop generates high revenue because of its higher selling price.
+   - Phones show strong sales activity across multiple cities.
+   - Product-wise sales help understand which products drive revenue.
+
+3. Category-wise Performance:
+   - Computers and Mobiles contribute strongly to total sales.
+   - Accessories generate lower revenue compared to other categories.
+   - Category analysis helps decide business focus areas.
+
+4. Quantity Analysis:
+   - Some products sell more units but may generate lower revenue.
+   - High quantity does not always mean high sales value.
+   - Quantity analysis helps compare demand and revenue together.
+
+5. Payment Mode Analysis:
+   - Payment mode analysis helps understand customer payment preferences.
+   - UPI, Card, and Cash transactions show different sales contributions.
+   - This can help businesses improve payment strategy.
+
+6. Product Contribution:
+   - Pie chart analysis shows each product/category contribution to total sales.
+   - Higher-value products contribute more to revenue share.
+
+7. Quantity vs Sales:
+   - Scatter plot helps compare quantity sold with sales amount.
+   - Sales depend not only on quantity but also on product price.
+
+8. City vs Product Sales:
+   - Different cities show different product sales patterns.
+   - This helps understand location-based product demand.
+
+9. Final Conclusion:
+   - This project covers groupby analysis, aggregation, pivot tables, sorting, visualization, and business insight writing.
+   - It forms a complete beginner-to-intermediate level sales analytics workflow using Pandas and Matplotlib.
