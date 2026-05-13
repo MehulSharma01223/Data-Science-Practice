@@ -1,0 +1,51 @@
+MOVIE ANALYSIS PROJECT - INSIGHTS
+
+1. Dataset Overview:
+   - The dataset contains thousands of movie records with title, release date, popularity, vote count, vote average, language, genre, and poster information.
+   - Basic inspection helped identify missing values and incorrect data types.
+
+2. Data Cleaning:
+   - Missing values were removed using dropna().
+   - Vote_Count, Vote_Average, and Popularity were converted into numeric format.
+   - Release_Date was converted into datetime format.
+   - Year and Decade columns were created for time-based analysis.
+
+3. Movie Release Trend:
+   - Year-wise analysis shows how movie releases changed over time.
+   - Recent year trends help understand growth in movie production.
+
+4. Popular Movies:
+   - Popularity analysis helps identify the most trending movies.
+   - Top popular movies are ranked using the Popularity column.
+
+5. Rating Analysis:
+   - Vote_Average helps identify highly rated movies.
+   - Histogram and boxplot analysis show how ratings are distributed.
+
+6. Vote Count Analysis:
+   - Vote_Count shows audience engagement.
+   - Movies with high vote counts indicate stronger viewer interaction.
+
+7. Language Analysis:
+   - Original language distribution shows which languages dominate the dataset.
+   - English movies appear strongly represented in the dataset.
+
+8. Genre Analysis:
+   - Genre frequency analysis helps identify the most common movie categories.
+   - Genre contribution helps understand content distribution.
+
+9. Popularity vs Rating:
+   - Scatter plot analysis compares movie popularity with average rating.
+   - A highly popular movie does not always have the highest rating.
+
+10. Correlation Analysis:
+   - Correlation matrix compares Popularity, Vote_Count, and Vote_Average.
+   - This helps understand relationships between movie success indicators.
+
+11. Decade Analysis:
+   - Movies were grouped by decade to understand long-term release patterns.
+   - This gives a broader historical view of movie production.
+
+12. Final Conclusion:
+   - This project covers data cleaning, datatype conversion, datetime handling, groupby analysis, sorting, correlation, visualization, and insight writing.
+   - It forms a strong intermediate-level EDA project using Pandas and Matplotlib.
