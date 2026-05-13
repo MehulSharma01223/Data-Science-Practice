@@ -2,241 +2,415 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import os
 
-# =====================
-# Paths
-# =====================
+# ==================================================
+# PATHS
+# ==================================================
 
 DATA_PATH = r"C:\Users\MAINAK\Desktop\SQl\Pandas\projects\student_analysis\data\data.csv"
+CLEANED_PATH = r"C:\Users\MAINAK\Desktop\SQl\Pandas\projects\student_analysis\data\cleaned_students.csv"
 VISUALS_DIR = r"C:\Users\MAINAK\Desktop\SQl\Pandas\projects\student_analysis\visuals"
 INSIGHTS_PATH = r"C:\Users\MAINAK\Desktop\SQl\Pandas\projects\student_analysis\insights.txt"
 
 os.makedirs(VISUALS_DIR, exist_ok=True)
 
-# =====================
-# Load Data
-# =====================
+# ==================================================
+# CREATE UPGRADED DATASET
+# ==================================================
+
+df = pd.DataFrame({
+    "Name": [
+        "Aarav","Priya","Rohan","Sneha","Karan","Meera","Aman","Isha","Rahul","Ananya",
+        "Vikram","Nisha","Dev","Pooja","Arjun","Kavya","Mohit","Riya","Sahil","Tanya",
+        "Yash","Neha","Harsh","Simran","Aditya","Mansi","Rakesh","Divya","Nitin","Shreya"
+    ],
+    "City": [
+        "Delhi","Mumbai","Pune","Delhi","Chennai","Mumbai","Delhi","Pune","Jaipur","Delhi",
+        "Mumbai","Chennai","Jaipur","Pune","Delhi","Mumbai","Chennai","Jaipur","Pune","Delhi",
+        "Mumbai","Jaipur","Chennai","Pune","Delhi","Mumbai","Jaipur","Chennai","Pune","Delhi"
+    ],
+    "Subject": [
+        "Python","SQL","Python","Pandas","Python","SQL","Pandas","Python","SQL","Pandas",
+        "Python","Pandas","SQL","Python","SQL","Pandas","Python","SQL","Pandas","Python",
+        "SQL","Pandas","Python","SQL","Pandas","Python","SQL","Pandas","Python","SQL"
+    ],
+    "Gender": [
+        "Male","Female","Male","Female","Male","Female","Male","Female","Male","Female",
+        "Male","Female","Male","Female","Male","Female","Male","Female","Male","Female",
+        "Male","Female","Male","Female","Male","Female","Male","Female","Male","Female"
+    ],
+    "Age": [21,22,23,21,22,23,24,21,22,20,23,22,21,24,22,23,21,22,24,20,23,21,22,24,21,22,23,20,24,21],
+    "Marks": [88,72,91,65,78,58,84,69,55,93,74,81,49,67,86,79,92,61,73,95,57,82,76,64,89,71,52,85,68,90],
+    "Attendance": [92,85,96,78,88,70,91,82,68,97,84,89,60,75,93,87,95,73,80,98,66,90,83,72,94,86,64,92,79,96],
+    "Study_Hours": [5,3,6,2,4,2,5,3,1,7,4,5,1,3,6,4,7,2,3,8,2,5,4,3,6,4,1,6,3,7]
+})
+
+df.to_csv(DATA_PATH, index=False)
+
+# ==================================================
+# LOAD DATASET
+# ==================================================
 
 df = pd.read_csv(DATA_PATH)
 
-# =====================
-# Data Cleaning
-# =====================
+# ==================================================
+# BASIC INFO
+# ==================================================
 
-df.loc[df["Marks"] < 50, "Marks"] = 0
+print("\n========== FIRST 5 ROWS ==========\n")
+print(df.head())
 
-# =====================
-# Analysis
-# =====================
+print("\n========== DATASET SHAPE ==========\n")
+print(df.shape)
 
-topper = df.sort_values(by="Marks", ascending=False).head(1)
-top3 = df.sort_values(by="Marks", ascending=False).head(3)
+print("\n========== COLUMN NAMES ==========\n")
+print(df.columns)
 
-city_analysis = df.groupby("City")["Marks"].agg(["mean", "max", "min"])
-city_topper = df.loc[df.groupby("City")["Marks"].idxmax()]
+print("\n========== DATA TYPES ==========\n")
+print(df.dtypes)
 
-high_students = df[df["Marks"] > 60].groupby("City").size()
-total_students = df.groupby("City").size()
-high_percentage = (high_students / total_students).fillna(0) * 100
+print("\n========== MISSING VALUES ==========\n")
+print(df.isnull().sum())
 
-city_total_marks = df.groupby("City")["Marks"].sum()
+# ==================================================
+# DATA CLEANING
+# ==================================================
 
-young_students = df[df["Age"] < 23]
-old_students = df[df["Age"] >= 23]
+df = df.dropna()
 
-df["Age_Group"] = df["Age"].apply(lambda x: "Young" if x < 23 else "Old")
-age_group_avg = df.groupby("Age_Group")["Marks"].mean()
+df["Marks"] = pd.to_numeric(df["Marks"], errors="coerce")
+df["Attendance"] = pd.to_numeric(df["Attendance"], errors="coerce")
+df["Study_Hours"] = pd.to_numeric(df["Study_Hours"], errors="coerce")
 
-avg_marks = df.groupby("City")["Marks"].mean()
+df = df.dropna()
+
+# ==================================================
+# FEATURE ENGINEERING
+# ==================================================
 
 def performance_category(x):
-    if x > 75:
+    if x >= 85:
+        return "Excellent"
+    elif x >= 70:
         return "Good"
-    elif x > 60:
+    elif x >= 50:
         return "Average"
     else:
         return "Poor"
 
-performance = avg_marks.apply(performance_category)
-performance_count = performance.value_counts()
+df["Performance"] = df["Marks"].apply(performance_category)
+
+df["Age_Group"] = df["Age"].apply(
+    lambda x: "Young" if x < 23 else "Old"
+)
 
 bins = [0, 40, 60, 80, 100]
 labels = ["0-40", "40-60", "60-80", "80-100"]
-df["Marks_Range"] = pd.cut(df["Marks"], bins=bins, labels=labels, include_lowest=True)
+
+df["Marks_Range"] = pd.cut(
+    df["Marks"],
+    bins=bins,
+    labels=labels,
+    include_lowest=True
+)
+
+df.to_csv(CLEANED_PATH, index=False)
+
+print("\n========== CLEANED DATA ==========\n")
+print(df.head())
+
+# ==================================================
+# ANALYSIS
+# ==================================================
+
+topper = df.sort_values(by="Marks", ascending=False).head(1)
+top10 = df.sort_values(by="Marks", ascending=False).head(10)
+
+city_avg_marks = df.groupby("City")["Marks"].mean().sort_values(ascending=False)
+city_total_marks = df.groupby("City")["Marks"].sum()
+city_student_count = df.groupby("City")["Name"].count()
+
+subject_avg_marks = df.groupby("Subject")["Marks"].mean().sort_values(ascending=False)
+subject_total_students = df.groupby("Subject")["Name"].count()
+
+gender_avg_marks = df.groupby("Gender")["Marks"].mean()
+age_group_avg_marks = df.groupby("Age_Group")["Marks"].mean()
+
+performance_count = df["Performance"].value_counts()
 marks_range_count = df["Marks_Range"].value_counts().sort_index()
 
-# =====================
-# Visual 1: High Performers Percentage
-# =====================
+attendance_avg_city = df.groupby("City")["Attendance"].mean()
+study_hours_avg_subject = df.groupby("Subject")["Study_Hours"].mean()
 
-high_percentage.plot(kind="bar", color="orange")
-plt.title("High Performers Percentage by City")
+high_performers = df[df["Marks"] >= 85]
+weak_students = df[df["Marks"] < 60]
+
+subject_city_pivot = pd.pivot_table(
+    df,
+    values="Marks",
+    index="City",
+    columns="Subject",
+    aggfunc="mean"
+)
+
+correlation = df[["Marks", "Attendance", "Study_Hours"]].corr()
+
+print("\n========== TOPPER ==========\n")
+print(topper)
+
+print("\n========== TOP 10 STUDENTS ==========\n")
+print(top10)
+
+print("\n========== CITY AVERAGE MARKS ==========\n")
+print(city_avg_marks)
+
+print("\n========== SUBJECT AVERAGE MARKS ==========\n")
+print(subject_avg_marks)
+
+print("\n========== GENDER AVERAGE MARKS ==========\n")
+print(gender_avg_marks)
+
+print("\n========== PERFORMANCE COUNT ==========\n")
+print(performance_count)
+
+print("\n========== CORRELATION ==========\n")
+print(correlation)
+
+# ==================================================
+# VISUALIZATIONS
+# ==================================================
+
+# Graph 1: City-wise Average Marks
+city_avg_marks.plot(kind="bar", figsize=(9, 5))
+plt.title("City-wise Average Marks")
 plt.xlabel("City")
-plt.ylabel("Percentage (%)")
+plt.ylabel("Average Marks")
 plt.tight_layout()
-plt.savefig(os.path.join(VISUALS_DIR, "q16_high_performers_percentage.png"))
+plt.savefig(os.path.join(VISUALS_DIR, "01_city_avg_marks.png"))
+plt.show()
 plt.close()
 
-# =====================
-# Visual 2: City-wise Total Marks Pie Chart
-# =====================
-
-city_total_marks.plot(kind="pie", autopct="%1.1f%%")
-plt.title("City-wise Total Marks Distribution")
-plt.ylabel("")
+# Graph 2: City-wise Total Marks
+city_total_marks.plot(kind="bar", figsize=(9, 5))
+plt.title("City-wise Total Marks")
+plt.xlabel("City")
+plt.ylabel("Total Marks")
 plt.tight_layout()
-plt.savefig(os.path.join(VISUALS_DIR, "q17_city_total_marks_pie.png"))
+plt.savefig(os.path.join(VISUALS_DIR, "02_city_total_marks.png"))
+plt.show()
 plt.close()
 
-# =====================
-# Visual 3: Marks vs Age Scatter Plot
-# =====================
-
-df.plot(x="Age", y="Marks", kind="scatter", color="blue")
-plt.title("Marks vs Age")
-plt.xlabel("Age")
-plt.ylabel("Marks")
+# Graph 3: City-wise Student Count
+city_student_count.plot(kind="bar", figsize=(9, 5))
+plt.title("City-wise Student Count")
+plt.xlabel("City")
+plt.ylabel("Number of Students")
 plt.tight_layout()
-plt.savefig(os.path.join(VISUALS_DIR, "q18_marks_vs_age_scatter.png"))
+plt.savefig(os.path.join(VISUALS_DIR, "03_city_student_count.png"))
+plt.show()
 plt.close()
 
-# =====================
-# Visual 4: Top 5 Students
-# =====================
+# Graph 4: Subject-wise Average Marks
+subject_avg_marks.plot(kind="bar", figsize=(9, 5))
+plt.title("Subject-wise Average Marks")
+plt.xlabel("Subject")
+plt.ylabel("Average Marks")
+plt.tight_layout()
+plt.savefig(os.path.join(VISUALS_DIR, "04_subject_avg_marks.png"))
+plt.show()
+plt.close()
 
-top5 = df.sort_values(by="Marks", ascending=False).head(5)
-top5.plot(x="Name", y="Marks", kind="bar", color="pink")
-plt.title("Top 5 Students by Marks")
+# Graph 5: Subject-wise Student Count
+subject_total_students.plot(kind="bar", figsize=(9, 5))
+plt.title("Subject-wise Student Count")
+plt.xlabel("Subject")
+plt.ylabel("Number of Students")
+plt.tight_layout()
+plt.savefig(os.path.join(VISUALS_DIR, "05_subject_student_count.png"))
+plt.show()
+plt.close()
+
+# Graph 6: Gender-wise Average Marks
+gender_avg_marks.plot(kind="bar", figsize=(8, 5))
+plt.title("Gender-wise Average Marks")
+plt.xlabel("Gender")
+plt.ylabel("Average Marks")
+plt.tight_layout()
+plt.savefig(os.path.join(VISUALS_DIR, "06_gender_avg_marks.png"))
+plt.show()
+plt.close()
+
+# Graph 7: Top 10 Students
+top10.plot(x="Name", y="Marks", kind="bar", figsize=(10, 5))
+plt.title("Top 10 Students by Marks")
 plt.xlabel("Student Name")
 plt.ylabel("Marks")
 plt.tight_layout()
-plt.savefig(os.path.join(VISUALS_DIR, "q19_top5_students.png"))
+plt.savefig(os.path.join(VISUALS_DIR, "07_top10_students.png"))
+plt.show()
 plt.close()
 
-# =====================
-# Visual 5: Performance Category
-# =====================
-
-performance_count.plot(kind="bar", color="green")
-plt.title("City-wise Performance Category")
+# Graph 8: Performance Category Count
+performance_count.plot(kind="bar", figsize=(8, 5))
+plt.title("Performance Category Distribution")
 plt.xlabel("Performance Category")
-plt.ylabel("Number of Cities")
+plt.ylabel("Number of Students")
 plt.tight_layout()
-plt.savefig(os.path.join(VISUALS_DIR, "q20_performance_category.png"))
+plt.savefig(os.path.join(VISUALS_DIR, "08_performance_category.png"))
+plt.show()
 plt.close()
 
-# =====================
-# Visual 6: Marks Histogram with Mean Line
-# =====================
+# Graph 9: Marks Range Distribution
+marks_range_count.plot(kind="bar", figsize=(8, 5))
+plt.title("Marks Range Distribution")
+plt.xlabel("Marks Range")
+plt.ylabel("Number of Students")
+plt.tight_layout()
+plt.savefig(os.path.join(VISUALS_DIR, "09_marks_range.png"))
+plt.show()
+plt.close()
 
+# Graph 10: Marks Histogram with Mean Line
 mean_marks = df["Marks"].mean()
 
-df["Marks"].plot(kind="hist", color="yellow")
+df["Marks"].plot(kind="hist", bins=10, figsize=(8, 5))
 plt.axvline(mean_marks, color="red", linewidth=2, label="Mean")
 plt.title("Marks Distribution with Mean Line")
 plt.xlabel("Marks")
 plt.ylabel("Frequency")
 plt.legend()
 plt.tight_layout()
-plt.savefig(os.path.join(VISUALS_DIR, "q21_marks_histogram_mean.png"))
+plt.savefig(os.path.join(VISUALS_DIR, "10_marks_histogram_mean.png"))
+plt.show()
 plt.close()
 
-# =====================
-# Visual 7: Student Count vs Average Marks
-# =====================
-
-count = df.groupby("City").size()
-avg = df.groupby("City")["Marks"].mean()
-
-combined = pd.DataFrame({
-    "Student_Count": count,
-    "Average_Marks": avg
-})
-
-combined.plot(kind="bar")
-plt.title("City-wise Student Count vs Average Marks")
-plt.xlabel("City")
-plt.ylabel("Value")
+# Graph 11: Attendance vs Marks
+plt.figure(figsize=(8, 5))
+plt.scatter(df["Attendance"], df["Marks"])
+plt.title("Attendance vs Marks")
+plt.xlabel("Attendance (%)")
+plt.ylabel("Marks")
 plt.tight_layout()
-plt.savefig(os.path.join(VISUALS_DIR, "q22_count_vs_average_marks.png"))
+plt.savefig(os.path.join(VISUALS_DIR, "11_attendance_vs_marks.png"))
+plt.show()
 plt.close()
 
-# =====================
-# Visual 8: Young vs Old Students
-# =====================
+# Graph 12: Study Hours vs Marks
+plt.figure(figsize=(8, 5))
+plt.scatter(df["Study_Hours"], df["Marks"])
+plt.title("Study Hours vs Marks")
+plt.xlabel("Study Hours")
+plt.ylabel("Marks")
+plt.tight_layout()
+plt.savefig(os.path.join(VISUALS_DIR, "12_study_hours_vs_marks.png"))
+plt.show()
+plt.close()
 
-age_group_avg.plot(kind="bar", color=["green", "orange"])
-plt.title("Young vs Old Students Performance")
+# Graph 13: Age Group Average Marks
+age_group_avg_marks.plot(kind="bar", figsize=(8, 5))
+plt.title("Age Group-wise Average Marks")
 plt.xlabel("Age Group")
 plt.ylabel("Average Marks")
 plt.tight_layout()
-plt.savefig(os.path.join(VISUALS_DIR, "q23_young_vs_old.png"))
+plt.savefig(os.path.join(VISUALS_DIR, "13_age_group_avg_marks.png"))
+plt.show()
 plt.close()
 
-# =====================
-# Visual 9: Marks Range Distribution
-# =====================
-
-marks_range_count.plot(kind="bar", color="purple")
-plt.title("Marks Distribution by Range")
-plt.xlabel("Marks Range")
-plt.ylabel("Number of Students")
+# Graph 14: Average Attendance by City
+attendance_avg_city.plot(kind="bar", figsize=(9, 5))
+plt.title("City-wise Average Attendance")
+plt.xlabel("City")
+plt.ylabel("Average Attendance")
 plt.tight_layout()
-plt.savefig(os.path.join(VISUALS_DIR, "q24_marks_range_distribution.png"))
+plt.savefig(os.path.join(VISUALS_DIR, "14_city_avg_attendance.png"))
+plt.show()
 plt.close()
 
-# =====================
-# Insights
-# =====================
+# Graph 15: Subject City Pivot
+subject_city_pivot.plot(kind="bar", figsize=(11, 6))
+plt.title("City vs Subject Average Marks")
+plt.xlabel("City")
+plt.ylabel("Average Marks")
+plt.tight_layout()
+plt.savefig(os.path.join(VISUALS_DIR, "15_city_subject_pivot.png"))
+plt.show()
+plt.close()
 
-best_city = avg_marks.idxmax()
-weak_city = avg_marks.idxmin()
+# Graph 16: Correlation Matrix
+plt.figure(figsize=(7, 5))
+plt.imshow(correlation)
+plt.colorbar()
+plt.xticks(range(len(correlation.columns)), correlation.columns)
+plt.yticks(range(len(correlation.columns)), correlation.columns)
+plt.title("Correlation Matrix")
+plt.tight_layout()
+plt.savefig(os.path.join(VISUALS_DIR, "16_correlation_matrix.png"))
+plt.show()
+plt.close()
+
+# ==================================================
+# INSIGHTS
+# ==================================================
+
+best_city = city_avg_marks.idxmax()
+weak_city = city_avg_marks.idxmin()
+
+best_subject = subject_avg_marks.idxmax()
+weak_subject = subject_avg_marks.idxmin()
+
 highest_topper = topper.iloc[0]["Name"]
 highest_marks = topper.iloc[0]["Marks"]
 
 insights = f"""
 STUDENT PERFORMANCE ANALYSIS - INSIGHTS
 
-1. Overall Topper:
+1. Dataset Overview:
+   - The upgraded dataset contains 30 students.
+   - It includes Name, City, Subject, Gender, Age, Marks, Attendance, and Study_Hours.
+   - This makes the project more realistic than the previous small dataset.
+
+2. Overall Topper:
    - Student {highest_topper} scored the highest marks with {highest_marks} marks.
 
-2. City-wise Performance:
+3. City-wise Performance:
    - {best_city} has the highest average marks.
    - {weak_city} has the lowest average marks.
-   - This shows that performance differs clearly across cities.
+   - City-wise analysis helps compare regional performance.
 
-3. High Performers:
-   - Delhi and Chennai show strong high-performer percentage.
-   - Mumbai and Pune have lower high-performer presence.
+4. Subject-wise Performance:
+   - {best_subject} has the highest average marks.
+   - {weak_subject} has the lowest average marks.
+   - Subject-wise analysis helps identify stronger and weaker academic areas.
 
-4. Top Students:
-   - The top 5 students are clearly identified using marks ranking.
-   - Sorting helps compare high-performing students easily.
+5. Gender-wise Performance:
+   - Gender-wise average marks help compare performance patterns between groups.
+   - This analysis is useful for balanced academic reporting.
 
-5. Age vs Marks:
-   - The scatter plot helps check whether age affects marks.
-   - In this small dataset, marks do not show a strong clear relationship with age.
+6. Attendance vs Marks:
+   - Scatter plot helps check whether attendance is related to marks.
+   - Higher attendance generally supports better academic performance.
 
-6. Young vs Old:
-   - Students are divided into Young and Old groups using Age.
-   - Their average marks are compared to understand group-level performance.
+7. Study Hours vs Marks:
+   - Study hours are compared with marks to understand learning effort.
+   - Students with more study hours tend to show better performance.
 
-7. Marks Distribution:
-   - Histogram shows how marks are spread.
-   - The mean line helps identify whether students are scoring above or below average.
+8. Performance Categories:
+   - Students are divided into Excellent, Good, Average, and Poor categories.
+   - This helps understand overall performance distribution.
 
-8. Marks Range:
-   - Marks are divided into ranges using pd.cut().
-   - This helps understand which score range has the most students.
+9. Marks Range:
+   - Marks are divided into score ranges using pd.cut().
+   - This helps understand which marks range contains the most students.
 
-9. Final Conclusion:
-   - Delhi performs strongly overall.
-   - Some cities need improvement based on average marks and high-performer percentage.
-   - This project covers data cleaning, filtering, groupby, aggregation, visualization, and insight writing.
+10. Final Conclusion:
+   - This upgraded project covers data creation, CSV export, cleaning, feature engineering, groupby analysis, pivot tables, correlation, visualization, and insight writing.
+   - It is now a stronger beginner-to-intermediate EDA project using Pandas and Matplotlib.
 """
 
 with open(INSIGHTS_PATH, "w", encoding="utf-8") as file:
     file.write(insights)
 
-print("Project completed successfully.")
-print("All graphs saved in visuals folder.")
-print("Insights saved in insights.txt.")
+print("\n========== PROJECT COMPLETED ==========")
+print("Upgraded dataset saved successfully.")
+print("Cleaned dataset saved successfully.")
+print("16 graphs saved in visuals folder.")
+print("Insights saved successfully.")
