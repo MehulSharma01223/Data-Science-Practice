@@ -1,60 +1,130 @@
-#  Student Performance Analysis Project
+![Python](https://img.shields.io/badge/Python-3.13-blue)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-black)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-orange)
+![Status](https://img.shields.io/badge/Project-Upgraded-brightgreen)
 
-##  Overview
+# Student Performance Analysis Project
 
-This project analyzes student performance using Python, Pandas, and Matplotlib. It includes data cleaning, analysis, visualizations, and insights generation.
+## Overview
+
+This project analyzes an upgraded student performance dataset using Python, Pandas, and Matplotlib.  
+It includes data creation, CSV export, cleaning, feature engineering, groupby analysis, pivot tables, correlation analysis, visualizations, and insight generation.
+
+The project demonstrates a stronger beginner-to-intermediate level EDA workflow.
 
 ---
 
-##  Project Structure
+## Project Structure
 
-* `data/` → dataset (CSV file)
-* `visuals/` → saved graphs
+* `data/` → raw and cleaned student datasets
+* `visuals/` → saved graphs and charts
 * `analysis.py` → main analysis script
 * `insights.txt` → key findings
+* `README.md` → project documentation
+* `requirements.txt` → required libraries
 
 ---
 
-##  Analysis Performed
+## Data Cleaning Performed
 
-* Topper identification
-* City-wise performance analysis
-* High performers percentage
-* Age vs Marks relationship
-* Performance category classification
-* Marks distribution using bins
-
----
-
-##  Visualizations
-
-* Bar charts (comparison & categories)
-* Pie chart (city contribution)
-* Scatter plot (Age vs Marks)
-* Histogram (distribution + mean line)
-* Multi-metric comparison graphs
+* Missing value handling using `dropna()`
+* Numeric conversion using `pd.to_numeric()`
+* Cleaned dataset exported as CSV
+* Performance categories created using `apply()`
+* Marks ranges created using `pd.cut()`
+* Age groups created using `lambda`
 
 ---
 
-##  Key Insights
+## Project Features
 
-* Delhi shows strong performance across metrics
-* Some cities have low high-performer percentage
-* Marks are mostly concentrated in mid-range
-* No strong correlation between age and marks
-* Performance varies significantly across cities
+- Upgraded dataset with 30 students
+- City-wise performance analysis
+- Subject-wise performance analysis
+- Gender-wise performance comparison
+- Attendance vs Marks analysis
+- Study Hours vs Marks analysis
+- Performance category classification
+- Marks range distribution
+- Pivot table based analysis
+- Correlation analysis
+- 16 saved visualizations using Matplotlib
+- Business-style insight generation
 
 ---
 
-##  Sample Visualizations
+## Analysis Performed
 
-![High Performers](visuals/q16_high_performers_percentage.png)
-![City Contribution](visuals/q17_city_total_marks_pie.png)
-![Marks vs Age](visuals/q18_marks_vs_age_scatter.png)
+* Overall topper identification
+* Top 10 students analysis
+* City-wise average marks
+* City-wise total marks
+* City-wise student count
+* Subject-wise average marks
+* Subject-wise student count
+* Gender-wise average marks
+* Age group-wise performance
+* Attendance vs Marks relationship
+* Study Hours vs Marks relationship
+* Performance category distribution
+* Marks range distribution
+* City vs Subject pivot analysis
+* Correlation analysis
 
 ---
 
-##  Tools Used
+## Visualizations
+
+* Bar charts for city, subject, gender, and category analysis
+* Scatter plots for Attendance vs Marks and Study Hours vs Marks
+* Histogram with mean line for marks distribution
+* Pivot-based grouped bar chart
+* Correlation matrix style visualization
+
+---
+
+## Key Insights
+
+* Tanya scored the highest marks with 95 marks.
+* Delhi has the highest average marks.
+* Jaipur has the lowest average marks.
+* Pandas has the highest subject-wise average marks.
+* SQL has the lowest subject-wise average marks.
+* Attendance and study hours help understand student performance patterns.
+* Performance categories help identify Excellent, Good, Average, and Poor students.
+* Marks range analysis helps understand score distribution.
+* Correlation analysis helps compare Marks, Attendance, and Study Hours.
+
+---
+
+## Sample Visualizations
+
+### City-wise Average Marks
+![City Average Marks](visuals/01_city_avg_marks.png)
+
+---
+
+### Top 10 Students
+![Top 10 Students](visuals/07_top10_students.png)
+
+---
+
+### Attendance vs Marks
+![Attendance vs Marks](visuals/11_attendance_vs_marks.png)
+
+---
+
+### Study Hours vs Marks
+![Study Hours vs Marks](visuals/12_study_hours_vs_marks.png)
+
+---
+
+### Correlation Matrix
+![Correlation Matrix](visuals/16_correlation_matrix.png)
+
+---
+
+## Tools Used
 
 * Python
 * Pandas
@@ -62,6 +132,27 @@ This project analyzes student performance using Python, Pandas, and Matplotlib. 
 
 ---
 
-##  Outcome
+## Outcome
 
-This project demonstrates data cleaning, analysis, visualization, and insight generation — forming a complete beginner-level data analytics workflow.
+This upgraded project demonstrates practical usage of:
+
+- Data Creation
+- CSV Export
+- Data Cleaning
+- Feature Engineering
+- GroupBy Analysis
+- Aggregation
+- Pivot Tables
+- Correlation Analysis
+- Data Visualization
+- EDA Insight Generation
+- GitHub Project Documentation
+
+It forms a stronger student performance analytics workflow using Pandas and Matplotlib.
+
+---
+
+## Author
+
+**Mehul Sharma**  
+Aspiring Data Scientist
