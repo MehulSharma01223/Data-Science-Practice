@@ -1,39 +1,47 @@
-
 STUDENT PERFORMANCE ANALYSIS - INSIGHTS
 
-1. Overall Topper:
-   - Student C scored the highest marks with 90 marks.
+1. Dataset Overview:
+   - The upgraded dataset contains 30 students.
+   - It includes Name, City, Subject, Gender, Age, Marks, Attendance, and Study_Hours.
+   - This makes the project more realistic than the previous small dataset.
 
-2. City-wise Performance:
+2. Overall Topper:
+   - Student Tanya scored the highest marks with 95 marks.
+
+3. City-wise Performance:
    - Delhi has the highest average marks.
-   - Pune has the lowest average marks.
-   - This shows that performance differs clearly across cities.
+   - Jaipur has the lowest average marks.
+   - City-wise analysis helps compare regional performance.
 
-3. High Performers:
-   - Delhi and Chennai show strong high-performer percentage.
-   - Mumbai and Pune have lower high-performer presence.
+4. Subject-wise Performance:
+   - Pandas has the highest average marks.
+   - SQL has the lowest average marks.
+   - Subject-wise analysis helps identify stronger and weaker academic areas.
 
-4. Top Students:
-   - The top 5 students are clearly identified using marks ranking.
-   - Sorting helps compare high-performing students easily.
+5. Gender-wise Performance:
+   - Gender-wise average marks help compare performance patterns between groups.
+   - This analysis is useful for balanced academic reporting.
 
-5. Age vs Marks:
-   - The scatter plot helps check whether age affects marks.
-   - In this small dataset, marks do not show a strong clear relationship with age.
+6. Attendance vs Marks:
+   - Scatter plot helps check whether attendance is related to marks.
+   - Higher attendance generally supports better academic performance.
 
-6. Young vs Old:
-   - Students are divided into Young and Old groups using Age.
-   - Their average marks are compared to understand group-level performance.
+7. Study Hours vs Marks:
+   - Study hours are compared with marks to understand learning effort.
+   - Students with more study hours tend to show better performance.
 
-7. Marks Distribution:
-   - Histogram shows how marks are spread.
-   - The mean line helps identify whether students are scoring above or below average.
+8. Performance Categories:
+   - Students are divided into Excellent, Good, Average, and Poor categories.
+   - This helps understand overall performance distribution.
 
-8. Marks Range:
-   - Marks are divided into ranges using pd.cut().
-   - This helps understand which score range has the most students.
+9. Marks Range:
+   - Marks are divided into score ranges using pd.cut().
+   - This helps understand which marks range contains the most students.
 
-9. Final Conclusion:
-   - Delhi performs strongly overall.
-   - Some cities need improvement based on average marks and high-performer percentage.
-   - This project covers data cleaning, filtering, groupby, aggregation, visualization, and insight writing.
+10. Correlation Analysis:
+   - Correlation analysis compares Marks, Attendance, and Study_Hours.
+   - This helps understand relationships between academic performance indicators.
+
+11. Final Conclusion:
+   - This upgraded project covers data creation, CSV export, cleaning, feature engineering, groupby analysis, pivot tables, correlation, visualization, and insight writing.
+   - It is now a stronger beginner-to-intermediate EDA project using Pandas and Matplotlib.
