@@ -48,9 +48,3 @@ plt.grid(alpha=0.3)
 plt.tight_layout()
 
 plt.show()
-
-git add C:\Users\MAINAK\Desktop\Data-Science\Python\seaborn\01_scatterplot.py
-
-git commit -m "feat(seaborn): add scatterplot basics and customization"
-
-git push
