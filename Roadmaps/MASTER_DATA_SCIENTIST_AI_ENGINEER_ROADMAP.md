@@ -4217,3 +4217,624 @@ After completing this phase I should be able to:
 ---
 
 # 🚀 END OF PART 7
+
+---
+
+# 🚀 PART 8 — COMPUTER VISION ROADMAP
+
+## 🎯 Objective
+
+Build intelligent systems capable of understanding, analyzing and interpreting images and videos.
+
+Computer Vision enables machines to "see" and make decisions from visual data.
+
+---
+
+# 🛣️ Learning Flow
+
+Python
+
+↓
+
+NumPy
+
+↓
+
+OpenCV
+
+↓
+
+Image Processing
+
+↓
+
+CNN
+
+↓
+
+Object Detection
+
+↓
+
+Segmentation
+
+↓
+
+OCR
+
+↓
+
+Real-Time Vision Systems
+
+---
+
+# 📌 Stage 1 — Computer Vision Fundamentals
+
+Understand
+
+What is Computer Vision?
+
+Why Computer Vision?
+
+Applications
+
+Image Representation
+
+Pixels
+
+Color Spaces
+
+Image Channels
+
+Image Formats
+
+Resolution
+
+Aspect Ratio
+
+---
+
+Difficulty
+
+⭐⭐
+
+Estimated Time
+
+1 Week
+
+---
+
+# 📌 Stage 2 — OpenCV Basics
+
+Installation
+
+Reading Images
+
+Displaying Images
+
+Saving Images
+
+Reading Videos
+
+Webcam Capture
+
+Image Information
+
+Drawing Shapes
+
+Drawing Text
+
+Mouse Events
+
+Keyboard Events
+
+---
+
+Projects
+
+Image Viewer
+
+Paint Application
+
+Camera Capture Tool
+
+---
+
+Difficulty
+
+⭐⭐⭐
+
+Estimated Time
+
+1 Week
+
+---
+
+# 📌 Stage 3 — Image Processing
+
+Grayscale
+
+Resize
+
+Crop
+
+Rotate
+
+Flip
+
+Blurring
+
+Sharpening
+
+Thresholding
+
+Histogram Equalization
+
+Morphological Operations
+
+Contours
+
+Edge Detection
+
+Canny
+
+Image Filtering
+
+---
+
+Projects
+
+Document Scanner
+
+Image Enhancement Tool
+
+Barcode Detector
+
+---
+
+Difficulty
+
+⭐⭐⭐
+
+Estimated Time
+
+2 Weeks
+
+---
+
+# 📌 Stage 4 — Feature Detection
+
+Harris Corner
+
+SIFT
+
+SURF (Concept)
+
+ORB
+
+Feature Matching
+
+Homography
+
+Image Stitching
+
+---
+
+Projects
+
+Panorama Creator
+
+Image Matching System
+
+---
+
+Difficulty
+
+⭐⭐⭐⭐
+
+Estimated Time
+
+1 Week
+
+---
+
+# 📌 Stage 5 — Deep Learning for Vision
+
+CNN
+
+Pooling
+
+Stride
+
+Padding
+
+Transfer Learning
+
+Image Augmentation
+
+Batch Normalization
+
+Dropout
+
+Fine Tuning
+
+---
+
+Projects
+
+Cat vs Dog
+
+Plant Disease
+
+Face Mask Detection
+
+Food Classification
+
+---
+
+Difficulty
+
+⭐⭐⭐⭐
+
+Estimated Time
+
+2 Weeks
+
+---
+
+# 📌 Stage 6 — Object Detection
+
+Bounding Boxes
+
+IoU
+
+Anchor Boxes
+
+R-CNN (Concept)
+
+Fast R-CNN
+
+Faster R-CNN
+
+SSD
+
+YOLO
+
+YOLOv8
+
+NMS
+
+Evaluation Metrics
+
+---
+
+Projects
+
+Vehicle Detection
+
+People Counter
+
+Helmet Detection
+
+Traffic Monitoring
+
+---
+
+Difficulty
+
+⭐⭐⭐⭐⭐
+
+Estimated Time
+
+2 Weeks
+
+---
+
+# 📌 Stage 7 — Image Segmentation
+
+Semantic Segmentation
+
+Instance Segmentation
+
+Mask R-CNN
+
+U-Net
+
+Medical Image Segmentation
+
+---
+
+Projects
+
+Tumor Segmentation
+
+Road Lane Segmentation
+
+Satellite Image Analysis
+
+---
+
+Difficulty
+
+⭐⭐⭐⭐⭐
+
+Estimated Time
+
+2 Weeks
+
+---
+
+# 📌 Stage 8 — OCR
+
+Optical Character Recognition
+
+EasyOCR
+
+Tesseract OCR
+
+Text Detection
+
+Text Recognition
+
+Document Parsing
+
+Invoice Reading
+
+Passport Reading
+
+License Plate Recognition
+
+---
+
+Projects
+
+Document Scanner
+
+Invoice Reader
+
+Number Plate Recognition
+
+Resume OCR
+
+---
+
+Difficulty
+
+⭐⭐⭐⭐
+
+Estimated Time
+
+1 Week
+
+---
+
+# 📌 Stage 9 — Face Analysis
+
+Face Detection
+
+Face Recognition
+
+Face Embeddings
+
+Facial Landmarks
+
+Emotion Detection
+
+Age & Gender Estimation (Overview)
+
+---
+
+Projects
+
+Attendance System
+
+Emotion Detection
+
+Face Unlock Prototype
+
+---
+
+Difficulty
+
+⭐⭐⭐⭐
+
+Estimated Time
+
+1 Week
+
+---
+
+# 📌 Stage 10 — Video Analytics
+
+Frame Processing
+
+Object Tracking
+
+Optical Flow
+
+Background Subtraction
+
+Real-Time Detection
+
+Multi-Object Tracking
+
+---
+
+Projects
+
+Crowd Counter
+
+Parking Monitoring
+
+Sports Analytics
+
+Security Surveillance
+
+---
+
+Difficulty
+
+⭐⭐⭐⭐⭐
+
+Estimated Time
+
+2 Weeks
+
+---
+
+# 📌 Stage 11 — Vision Deployment
+
+FastAPI
+
+Streamlit
+
+Docker
+
+ONNX
+
+TensorRT (Overview)
+
+Cloud Deployment
+
+Real-Time API
+
+Model Monitoring
+
+---
+
+# 📂 GitHub Structure
+
+ComputerVision/
+
+README.md
+
+datasets/
+
+01_opencv_basics.py
+
+02_image_processing.py
+
+03_feature_detection.py
+
+04_cnn.py
+
+05_yolo.py
+
+06_segmentation.py
+
+07_ocr.py
+
+08_face_detection.py
+
+09_video_analytics.py
+
+mini_projects/
+
+---
+
+# 📊 Major Projects
+
+Face Recognition System
+
+Attendance System
+
+Document Scanner
+
+OCR PDF Reader
+
+Vehicle Detection
+
+Helmet Detection
+
+License Plate Recognition
+
+Medical Image Classifier
+
+Plant Disease Detection
+
+Retail Shelf Monitoring
+
+Real-Time Security System
+
+---
+
+# 📖 Interview Preparation
+
+Be able to explain
+
+Image vs Video
+
+RGB vs BGR
+
+Grayscale
+
+Histogram
+
+Convolution
+
+Pooling
+
+CNN
+
+Transfer Learning
+
+YOLO
+
+Object Detection vs Segmentation
+
+IoU
+
+NMS
+
+OCR
+
+OpenCV
+
+---
+
+# 📚 Recommended Resources
+
+Primary
+
+CampusX
+
+Secondary
+
+OpenCV Official Documentation
+
+Ultralytics YOLO Documentation
+
+PyImageSearch
+
+DeepLearning.AI Computer Vision Courses
+
+Papers With Code
+
+---
+
+# 🎯 Success Criteria
+
+After completing this phase I should be able to:
+
+✔ Process images professionally
+
+✔ Build OpenCV applications
+
+✔ Train CNN models
+
+✔ Use transfer learning
+
+✔ Build object detection systems
+
+✔ Build OCR applications
+
+✔ Build segmentation models
+
+✔ Deploy Computer Vision projects
+
+✔ Explain Computer Vision concepts confidently
+
+---
+
+# 🚀 END OF PART 8
+
