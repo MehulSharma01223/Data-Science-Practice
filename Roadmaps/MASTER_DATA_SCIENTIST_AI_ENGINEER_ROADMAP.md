@@ -4838,3 +4838,774 @@ After completing this phase I should be able to:
 
 # 🚀 END OF PART 8
 
+---
+
+# 🚀 PART 9 — GENERATIVE AI & AI ENGINEERING ROADMAP
+
+## 🎯 Objective
+
+Become capable of building production-ready Generative AI applications powered by Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), AI Agents and modern AI infrastructure.
+
+The goal is not just to use ChatGPT.
+
+The goal is to build AI systems.
+
+---
+
+# 🛣️ Learning Flow
+
+Machine Learning
+
+↓
+
+Deep Learning
+
+↓
+
+Transformers
+
+↓
+
+LLMs
+
+↓
+
+Prompt Engineering
+
+↓
+
+Embeddings
+
+↓
+
+Vector Databases
+
+↓
+
+RAG
+
+↓
+
+LangChain
+
+↓
+
+LlamaIndex
+
+↓
+
+AI Agents
+
+↓
+
+MCP
+
+↓
+
+Production AI Applications
+
+---
+
+# 📌 Stage 1 — Foundations of Generative AI
+
+Understand
+
+What is Generative AI?
+
+History of Generative AI
+
+AI vs ML vs DL vs GenAI
+
+Discriminative vs Generative Models
+
+Foundation Models
+
+Large Language Models
+
+Multimodal Models
+
+Applications
+
+Limitations
+
+Ethics
+
+Hallucinations
+
+---
+
+Difficulty
+
+⭐⭐
+
+Estimated Time
+
+1 Week
+
+---
+
+# 📌 Stage 2 — Large Language Models
+
+Topics
+
+Tokens
+
+Tokenization
+
+Embeddings
+
+Context Window
+
+Temperature
+
+Top-K
+
+Top-P
+
+Inference
+
+Fine Tuning
+
+Instruction Tuning
+
+RLHF (Concept)
+
+Quantization
+
+Model Compression
+
+Popular Models
+
+GPT
+
+Llama
+
+Gemma
+
+Claude
+
+Mistral
+
+DeepSeek
+
+Qwen
+
+Phi
+
+---
+
+Projects
+
+LLM Playground
+
+Model Comparison
+
+Prompt Testing
+
+---
+
+Difficulty
+
+⭐⭐⭐⭐
+
+Estimated Time
+
+2 Weeks
+
+---
+
+# 📌 Stage 3 — Prompt Engineering
+
+Zero Shot
+
+One Shot
+
+Few Shot
+
+Chain of Thought
+
+Tree of Thought (Concept)
+
+Role Prompting
+
+Structured Prompting
+
+Prompt Chaining
+
+Prompt Evaluation
+
+Guardrails
+
+---
+
+Projects
+
+AI Tutor
+
+Research Assistant
+
+Coding Assistant
+
+Resume Assistant
+
+---
+
+Difficulty
+
+⭐⭐⭐
+
+Estimated Time
+
+1 Week
+
+---
+
+# 📌 Stage 4 — Embeddings
+
+Word Embeddings
+
+Sentence Embeddings
+
+Document Embeddings
+
+Similarity Search
+
+Cosine Similarity
+
+Embedding Models
+
+OpenAI Embeddings
+
+Sentence Transformers
+
+---
+
+Projects
+
+Semantic Search
+
+Document Search
+
+Recommendation Engine
+
+---
+
+Difficulty
+
+⭐⭐⭐⭐
+
+Estimated Time
+
+1 Week
+
+---
+
+# 📌 Stage 5 — Vector Databases
+
+Understand
+
+Why Vector DB?
+
+Vector Search
+
+Indexing
+
+Similarity Search
+
+Metadata Filtering
+
+Popular Databases
+
+FAISS
+
+ChromaDB
+
+Pinecone
+
+Weaviate
+
+Milvus
+
+Qdrant
+
+---
+
+Projects
+
+PDF Search Engine
+
+Knowledge Base
+
+Internal Search
+
+---
+
+Difficulty
+
+⭐⭐⭐⭐
+
+Estimated Time
+
+1 Week
+
+---
+
+# 📌 Stage 6 — Retrieval Augmented Generation (RAG)
+
+What is RAG?
+
+Why RAG?
+
+Chunking
+
+Retrieval
+
+Ranking
+
+Context Injection
+
+Prompt Construction
+
+Evaluation
+
+Hybrid Search
+
+Caching
+
+---
+
+Projects
+
+Chat with PDF
+
+Research Assistant
+
+Company Knowledge Bot
+
+Legal Assistant
+
+Medical Knowledge Assistant
+
+---
+
+Difficulty
+
+⭐⭐⭐⭐⭐
+
+Estimated Time
+
+2 Weeks
+
+---
+
+# 📌 Stage 7 — LangChain
+
+Chains
+
+Prompt Templates
+
+Output Parsers
+
+Memory
+
+Tools
+
+Agents
+
+Callbacks
+
+Retrievers
+
+Document Loaders
+
+Conversation Memory
+
+LCEL Basics
+
+---
+
+Projects
+
+Document Chatbot
+
+Research Agent
+
+Meeting Assistant
+
+Customer Support Bot
+
+---
+
+Difficulty
+
+⭐⭐⭐⭐⭐
+
+Estimated Time
+
+2 Weeks
+
+---
+
+# 📌 Stage 8 — LlamaIndex
+
+Document Readers
+
+Node Parsing
+
+Indexes
+
+Retrievers
+
+Query Engine
+
+Chat Engine
+
+Evaluation
+
+Knowledge Graphs (Overview)
+
+---
+
+Projects
+
+Research Paper Assistant
+
+Private ChatGPT
+
+Company Wiki Assistant
+
+---
+
+Difficulty
+
+⭐⭐⭐⭐
+
+Estimated Time
+
+1 Week
+
+---
+
+# 📌 Stage 9 — AI Agents
+
+Agent Architecture
+
+Planning
+
+Reasoning
+
+Tool Calling
+
+Memory
+
+Multi-Step Workflows
+
+Single Agent
+
+Multi-Agent Systems
+
+Supervisor Pattern
+
+Worker Pattern
+
+Reflection Pattern
+
+---
+
+Projects
+
+Travel Planner
+
+Research Agent
+
+Coding Agent
+
+Email Assistant
+
+Task Automation Agent
+
+---
+
+Difficulty
+
+⭐⭐⭐⭐⭐
+
+Estimated Time
+
+2 Weeks
+
+---
+
+# 📌 Stage 10 — MCP (Model Context Protocol)
+
+What is MCP?
+
+Why MCP?
+
+Clients
+
+Servers
+
+Resources
+
+Tools
+
+Prompts
+
+Transport Layer
+
+Local MCP Servers
+
+Remote MCP Servers
+
+Security
+
+Authentication
+
+Integration with AI Agents
+
+---
+
+Projects
+
+GitHub MCP Assistant
+
+SQL MCP Server
+
+Documentation Assistant
+
+File Analysis Agent
+
+---
+
+Difficulty
+
+⭐⭐⭐⭐⭐
+
+Estimated Time
+
+1 Week
+
+---
+
+# 📌 Stage 11 — AI APIs
+
+OpenAI API
+
+Gemini API
+
+Anthropic API
+
+OpenRouter
+
+Groq
+
+Together AI
+
+Fireworks AI
+
+Hugging Face Inference API
+
+Rate Limits
+
+Streaming
+
+Function Calling
+
+Structured Outputs
+
+---
+
+Projects
+
+Universal AI Chat App
+
+Multi-Model Playground
+
+---
+
+# 📌 Stage 12 — Fine Tuning & Evaluation
+
+Instruction Tuning
+
+LoRA
+
+QLoRA
+
+PEFT
+
+Model Evaluation
+
+Prompt Evaluation
+
+Safety Testing
+
+Benchmarking
+
+---
+
+Projects
+
+Domain Expert Chatbot
+
+Company Assistant
+
+---
+
+# 📌 Stage 13 — Production GenAI
+
+FastAPI
+
+Docker
+
+Redis (Caching)
+
+Authentication
+
+Logging
+
+Monitoring
+
+Cost Optimization
+
+Prompt Versioning
+
+Deployment
+
+---
+
+# 📂 GitHub Structure
+
+GenerativeAI/
+
+README.md
+
+01_prompt_engineering.md
+
+02_embeddings.py
+
+03_vector_database.py
+
+04_rag.py
+
+05_langchain.py
+
+06_llamaindex.py
+
+07_ai_agents.py
+
+08_mcp.py
+
+09_openai_api.py
+
+10_gemini_api.py
+
+mini_projects/
+
+---
+
+# 📊 Major Projects
+
+Private ChatGPT
+
+Chat with PDF
+
+Resume Reviewer
+
+AI Research Assistant
+
+Legal Assistant
+
+Medical Knowledge Assistant
+
+Customer Support Agent
+
+Multi-Agent Research System
+
+Code Review Assistant
+
+GitHub AI Assistant
+
+Enterprise RAG System
+
+---
+
+# 📖 Interview Preparation
+
+Be able to explain
+
+LLM
+
+Transformer
+
+Prompt Engineering
+
+Embeddings
+
+Vector Database
+
+RAG
+
+LangChain
+
+LlamaIndex
+
+AI Agents
+
+MCP
+
+Function Calling
+
+Hallucination
+
+Fine Tuning
+
+Context Window
+
+Tokenization
+
+Inference
+
+---
+
+# 📚 Recommended Resources
+
+Primary
+
+LangChain Documentation
+
+LlamaIndex Documentation
+
+OpenAI Documentation
+
+Anthropic Documentation
+
+Google Gemini Documentation
+
+Hugging Face Documentation
+
+DeepLearning.AI GenAI Courses
+
+---
+
+# 🎯 Success Criteria
+
+After completing this phase I should be able to:
+
+✔ Build RAG systems
+
+✔ Build AI Agents
+
+✔ Build MCP-powered applications
+
+✔ Use multiple LLM providers
+
+✔ Build production-ready GenAI applications
+
+✔ Deploy enterprise-grade AI assistants
+
+✔ Explain modern AI architecture confidently
+
+---
+
+# 🚀 END OF PART 9
