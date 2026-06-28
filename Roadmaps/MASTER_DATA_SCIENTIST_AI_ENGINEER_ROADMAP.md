@@ -509,3 +509,705 @@ Theory → Code → Practice → Project → Portfolio → Interview → Job
 
 Next:
 PART 2 — Complete Data Analyst Roadmap (Python → Seaborn → EDA → Plotly → Statistics → SQL → Excel → Power BI)
+
+---
+
+# 🚀 PART 2 — DATA ANALYST ROADMAP (FOUNDATION TO JOB-READY)
+
+This phase is the foundation of my entire Data Science journey.
+
+I will NOT rush.
+
+I will master every topic before moving to the next.
+
+Target:
+
+Become Job-Ready Data Analyst.
+
+Deadline:
+
+31 July
+
+---
+
+# 📅 Phase Overview
+
+Python ✅
+
+↓
+
+NumPy ✅
+
+↓
+
+Pandas 🔄
+
+↓
+
+Matplotlib ✅
+
+↓
+
+Seaborn 🔄
+
+↓
+
+EDA
+
+↓
+
+Plotly
+
+↓
+
+Statistics
+
+↓
+
+SQL
+
+↓
+
+Excel
+
+↓
+
+Power BI
+
+↓
+
+Projects
+
+↓
+
+Resume
+
+↓
+
+LinkedIn
+
+↓
+
+Portfolio
+
+↓
+
+Internship
+
+---
+
+# 📚 Phase 5 — Seaborn
+
+Objective
+
+Master professional data visualization.
+
+Topics
+
+01 Scatterplot
+
+02 Relplot
+
+03 Lineplot
+
+04 Histplot
+
+05 KDEPlot
+
+06 Displot
+
+07 Rugplot
+
+08 Countplot
+
+09 Barplot
+
+10 Boxplot
+
+11 Violinplot
+
+12 Stripplot
+
+13 Swarmplot
+
+14 Heatmap
+
+15 Pairplot
+
+16 Jointplot
+
+17 Catplot
+
+18 FacetGrid
+
+19 Themes
+
+20 Color Palettes
+
+21 Professional Styling
+
+22 Mini Projects
+
+---
+
+For Every Topic
+
+Theory
+
+↓
+
+Why
+
+↓
+
+Syntax
+
+↓
+
+Important Parameters
+
+↓
+
+Simple Example
+
+↓
+
+Professional Example
+
+↓
+
+Interview Questions
+
+↓
+
+Mini Challenge
+
+↓
+
+Git Commit
+
+↓
+
+Push
+
+---
+
+GitHub Structure
+
+Seaborn/
+
+README.md
+
+datasets/
+
+01_scatterplot.py
+
+02_relplot.py
+
+03_lineplot.py
+
+...
+
+mini_projects/
+
+---
+
+Goal
+
+Understand every parameter.
+
+Never memorize.
+
+---
+
+# 📊 Phase 6 — Exploratory Data Analysis
+
+Goal
+
+Become capable of exploring any dataset professionally.
+
+Topics
+
+Introduction
+
+Data Types
+
+Missing Values
+
+Duplicate Values
+
+Outliers
+
+Univariate Analysis
+
+Bivariate Analysis
+
+Multivariate Analysis
+
+Correlation
+
+Covariance
+
+Feature Relationships
+
+Feature Engineering Basics
+
+Data Cleaning
+
+EDA Workflow
+
+EDA Report
+
+Projects
+
+---
+
+Datasets
+
+Titanic
+
+Netflix
+
+Zomato
+
+IPL
+
+Sales
+
+Superstore
+
+Student Performance
+
+Housing
+
+Heart Disease
+
+---
+
+Mini Projects
+
+Titanic EDA
+
+Netflix EDA
+
+Zomato EDA
+
+IPL EDA
+
+---
+
+# 📈 Phase 7 — Plotly
+
+Goal
+
+Build interactive dashboards.
+
+Topics
+
+Scatter
+
+Line
+
+Bar
+
+Histogram
+
+Pie
+
+Box
+
+Violin
+
+Treemap
+
+Sunburst
+
+Heatmap
+
+Maps
+
+Subplots
+
+Dashboards
+
+Animation
+
+Export
+
+Projects
+
+---
+
+Mini Projects
+
+Sales Dashboard
+
+COVID Dashboard
+
+Netflix Dashboard
+
+IPL Dashboard
+
+---
+
+# 📉 Phase 8 — Statistics
+
+Goal
+
+Understand the mathematics behind Data Science.
+
+Topics
+
+Mean
+
+Median
+
+Mode
+
+Variance
+
+Standard Deviation
+
+Quartiles
+
+IQR
+
+Probability
+
+Normal Distribution
+
+Sampling
+
+Confidence Interval
+
+Hypothesis Testing
+
+Z-Test
+
+T-Test
+
+Chi-Square
+
+ANOVA
+
+Correlation
+
+Covariance
+
+Linear Algebra Basics
+
+Calculus Basics
+
+---
+
+Practice
+
+Python
+
+Excel
+
+Real Datasets
+
+Interview Questions
+
+---
+
+# 🗄 Phase 9 — SQL
+
+Goal
+
+Solve business problems using SQL.
+
+Topics
+
+SELECT
+
+WHERE
+
+ORDER BY
+
+LIMIT
+
+DISTINCT
+
+GROUP BY
+
+HAVING
+
+CASE WHEN
+
+String Functions
+
+Date Functions
+
+Aggregate Functions
+
+Joins
+
+Subqueries
+
+CTE
+
+Views
+
+Window Functions
+
+Optimization
+
+Interview Queries
+
+---
+
+Practice Platforms
+
+LeetCode
+
+DataLemur
+
+StrataScratch
+
+HackerRank
+
+---
+
+Target
+
+100+ SQL Problems
+
+---
+
+# 📊 Phase 10 — Excel
+
+Goal
+
+Master Excel for business analytics.
+
+Topics
+
+Formatting
+
+Cleaning
+
+Functions
+
+IF
+
+IFS
+
+VLOOKUP
+
+XLOOKUP
+
+INDEX MATCH
+
+Pivot Tables
+
+Charts
+
+Conditional Formatting
+
+Power Query Basics
+
+Dashboard
+
+Projects
+
+---
+
+Mini Projects
+
+Sales Dashboard
+
+HR Dashboard
+
+Finance Dashboard
+
+---
+
+# 📈 Phase 11 — Power BI
+
+Goal
+
+Professional dashboard development.
+
+Topics
+
+Power Query
+
+Data Modeling
+
+Relationships
+
+DAX
+
+Calculated Columns
+
+Measures
+
+KPIs
+
+Cards
+
+Filters
+
+Bookmarks
+
+Drillthrough
+
+Dashboard Design
+
+Publishing
+
+Projects
+
+---
+
+Mini Projects
+
+HR Analytics
+
+Sales Analytics
+
+Netflix Dashboard
+
+Blinkit Dashboard
+
+Financial Dashboard
+
+---
+
+# 📂 Weekly Learning Strategy
+
+Monday
+
+New Concept
+
+Tuesday
+
+Coding Practice
+
+Wednesday
+
+Mini Challenge
+
+Thursday
+
+Professional Example
+
+Friday
+
+Revision
+
+Saturday
+
+Mini Project
+
+Sunday
+
+GitHub Cleanup + README + Interview Questions
+
+---
+
+# 📌 Daily Learning Formula
+
+Learn Theory
+
+↓
+
+Understand Why
+
+↓
+
+Read Documentation
+
+↓
+
+Write Code Yourself
+
+↓
+
+Experiment
+
+↓
+
+Mini Challenge
+
+↓
+
+Commit to GitHub
+
+↓
+
+Push
+
+↓
+
+Revise
+
+---
+
+# 📊 Progress Checklist
+
+Python ✅
+
+NumPy ✅
+
+Pandas 🔄
+
+Matplotlib ✅
+
+Seaborn ⬜
+
+EDA ⬜
+
+Plotly ⬜
+
+Statistics ⬜
+
+SQL ⬜
+
+Excel ⬜
+
+Power BI ⬜
+
+Projects ⬜
+
+Resume ⬜
+
+LinkedIn ⬜
+
+Portfolio ⬜
+
+Internship ⬜
+
+---
+
+# 🎯 Milestone Target
+
+By completing Part 2, I should have:
+
+✔ Strong Python
+
+✔ Strong SQL
+
+✔ Strong Excel
+
+✔ Strong Power BI
+
+✔ Professional GitHub
+
+✔ 10+ Projects
+
+✔ Kaggle Profile
+
+✔ Resume
+
+✔ LinkedIn
+
+✔ Portfolio
+
+✔ Internship Ready Skills
+
+---
+
+🚀 END OF PART 2
