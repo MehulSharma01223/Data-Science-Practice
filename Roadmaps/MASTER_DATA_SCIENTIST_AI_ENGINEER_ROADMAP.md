@@ -2398,3 +2398,563 @@ By the end of the Data Analyst phase I should have:
 
 # 🚀 END OF PART 4
 
+---
+
+# 🚀 PART 5 — MACHINE LEARNING ROADMAP
+
+## 🎯 Objective
+
+Become capable of building production-ready Machine Learning solutions.
+
+Machine Learning is not about memorizing algorithms.
+
+It is about solving business problems using data.
+
+---
+
+# 🛣️ Learning Flow
+
+Python
+
+↓
+
+NumPy
+
+↓
+
+Pandas
+
+↓
+
+Visualization
+
+↓
+
+EDA
+
+↓
+
+Statistics
+
+↓
+
+SQL
+
+↓
+
+Machine Learning
+
+---
+
+# 📌 Machine Learning Roadmap
+
+Stage 1
+
+Machine Learning Introduction
+
+↓
+
+AI vs ML vs DL
+
+↓
+
+Types of Machine Learning
+
+↓
+
+ML Workflow
+
+↓
+
+Business Problem Understanding
+
+---
+
+Stage 2
+
+Mathematics
+
+Statistics Revision
+
+Probability
+
+Linear Algebra
+
+Calculus (Only Required Concepts)
+
+Optimization
+
+Distance Metrics
+
+Vectors
+
+Matrices
+
+---
+
+Stage 3
+
+Scikit-Learn
+
+Installation
+
+Datasets
+
+Model API
+
+Fit
+
+Predict
+
+Transform
+
+Pipeline
+
+Model Selection
+
+Metrics
+
+---
+
+Stage 4
+
+Data Preprocessing
+
+Missing Values
+
+Encoding
+
+Scaling
+
+Normalization
+
+Feature Engineering
+
+Feature Selection
+
+Train Test Split
+
+Cross Validation
+
+Data Leakage
+
+Pipelines
+
+---
+
+Stage 5
+
+Regression
+
+Linear Regression
+
+Polynomial Regression
+
+Ridge
+
+Lasso
+
+ElasticNet
+
+Decision Tree Regression
+
+Random Forest Regression
+
+Gradient Boosting
+
+XGBoost
+
+LightGBM
+
+CatBoost
+
+Evaluation
+
+Projects
+
+---
+
+Stage 6
+
+Classification
+
+Logistic Regression
+
+KNN
+
+Naive Bayes
+
+Decision Tree
+
+Random Forest
+
+SVM
+
+AdaBoost
+
+Gradient Boosting
+
+XGBoost
+
+LightGBM
+
+CatBoost
+
+Evaluation
+
+Projects
+
+---
+
+Stage 7
+
+Clustering
+
+KMeans
+
+Hierarchical
+
+DBSCAN
+
+Gaussian Mixture
+
+Evaluation
+
+Projects
+
+---
+
+Stage 8
+
+Dimensionality Reduction
+
+PCA
+
+t-SNE
+
+UMAP
+
+Feature Extraction
+
+Projects
+
+---
+
+Stage 9
+
+Recommendation Systems
+
+Content Based
+
+Collaborative Filtering
+
+Hybrid Systems
+
+Projects
+
+---
+
+Stage 10
+
+Model Evaluation
+
+Accuracy
+
+Precision
+
+Recall
+
+F1 Score
+
+ROC Curve
+
+AUC
+
+Confusion Matrix
+
+Regression Metrics
+
+Cross Validation
+
+Bias
+
+Variance
+
+Overfitting
+
+Underfitting
+
+Learning Curves
+
+Validation Curves
+
+---
+
+Stage 11
+
+Hyperparameter Tuning
+
+GridSearchCV
+
+RandomizedSearchCV
+
+Optuna (Advanced)
+
+---
+
+Stage 12
+
+Feature Engineering
+
+Feature Scaling
+
+Encoding
+
+Polynomial Features
+
+Interaction Features
+
+Date Features
+
+Text Features
+
+Image Features
+
+---
+
+Stage 13
+
+End-to-End Pipeline
+
+EDA
+
+↓
+
+Cleaning
+
+↓
+
+Feature Engineering
+
+↓
+
+Model
+
+↓
+
+Evaluation
+
+↓
+
+Deployment
+
+---
+
+# 📚 Practice Strategy
+
+Every algorithm
+
+↓
+
+Theory
+
+↓
+
+Math
+
+↓
+
+Visualization
+
+↓
+
+Code
+
+↓
+
+Implementation
+
+↓
+
+Mini Challenge
+
+↓
+
+Interview Questions
+
+↓
+
+Mini Project
+
+↓
+
+GitHub Commit
+
+---
+
+# 📂 GitHub Structure
+
+MachineLearning/
+
+README.md
+
+datasets/
+
+01_ml_intro.py
+
+02_preprocessing.py
+
+03_linear_regression.py
+
+04_logistic_regression.py
+
+...
+
+mini_projects/
+
+---
+
+# 📊 Mini Projects
+
+House Price Prediction
+
+Salary Prediction
+
+Student Performance
+
+Customer Churn
+
+Credit Risk
+
+Heart Disease Prediction
+
+Diabetes Prediction
+
+Loan Approval
+
+Insurance Cost Prediction
+
+Movie Recommendation
+
+---
+
+# 🏆 Major Projects
+
+Real Estate Price Predictor
+
+Customer Churn Prediction
+
+Fraud Detection
+
+Recommendation Engine
+
+Demand Forecasting
+
+Employee Attrition Prediction
+
+Loan Risk Prediction
+
+Stock Trend Prediction (Educational)
+
+---
+
+# 📖 Interview Preparation
+
+Understand:
+
+Why algorithm?
+
+Advantages
+
+Disadvantages
+
+Hyperparameters
+
+Complexity
+
+Business Use Cases
+
+Interview Questions
+
+Common Mistakes
+
+---
+
+# 📌 Daily Formula
+
+Concept
+
+↓
+
+Math
+
+↓
+
+Visualization
+
+↓
+
+Implementation
+
+↓
+
+Practice
+
+↓
+
+Project
+
+↓
+
+GitHub
+
+↓
+
+Revision
+
+---
+
+# 🎯 Milestone
+
+After completing Machine Learning I should be able to:
+
+✔ Build ML models from scratch
+
+✔ Clean data professionally
+
+✔ Engineer features
+
+✔ Evaluate models
+
+✔ Tune models
+
+✔ Build end-to-end pipelines
+
+✔ Complete 10+ ML projects
+
+✔ Explain algorithms confidently in interviews
+
+---
+
+# 📚 Recommended Resources
+
+Primary
+
+CampusX
+
+Secondary
+
+Scikit-learn Official Documentation
+
+Practice
+
+Kaggle
+
+UCI Machine Learning Repository
+
+Papers With Code (Later)
+
+---
+
+# 🚀 END OF PART 5
+
