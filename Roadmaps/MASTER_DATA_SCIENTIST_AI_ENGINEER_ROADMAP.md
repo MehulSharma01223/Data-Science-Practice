@@ -2958,3 +2958,669 @@ Papers With Code (Later)
 
 # 🚀 END OF PART 5
 
+---
+
+# 🚀 PART 6 — DEEP LEARNING ROADMAP
+
+## 🎯 Objective
+
+Become capable of building intelligent systems that can learn complex patterns from data such as images, text, audio and videos.
+
+Deep Learning is a subset of Machine Learning.
+
+Machine Learning learns from engineered features.
+
+Deep Learning learns features automatically.
+
+---
+
+# 🛣️ Learning Flow
+
+Machine Learning
+
+↓
+
+Neural Networks
+
+↓
+
+Deep Learning
+
+↓
+
+Computer Vision
+
+↓
+
+Natural Language Processing
+
+↓
+
+Generative AI
+
+---
+
+# 📌 Stage 1 — Deep Learning Foundations
+
+Artificial Intelligence
+
+↓
+
+Machine Learning
+
+↓
+
+Neural Networks
+
+↓
+
+Deep Learning
+
+Understand
+
+What is a Neural Network
+
+Neuron
+
+Weights
+
+Bias
+
+Activation Functions
+
+Loss Functions
+
+Gradient Descent
+
+Backpropagation
+
+Epoch
+
+Batch Size
+
+Learning Rate
+
+Optimizer
+
+---
+
+Difficulty
+
+⭐⭐⭐
+
+Estimated Time
+
+1 Week
+
+---
+
+# 📌 Stage 2 — Mathematics for Deep Learning
+
+Linear Algebra
+
+Matrices
+
+Vectors
+
+Dot Product
+
+Matrix Multiplication
+
+Transpose
+
+Eigenvalues (Basic)
+
+---
+
+Calculus
+
+Derivatives
+
+Chain Rule
+
+Partial Derivatives
+
+Gradient
+
+Optimization
+
+---
+
+Probability
+
+Probability Distribution
+
+Expectation
+
+Variance
+
+Likelihood
+
+---
+
+Difficulty
+
+⭐⭐⭐⭐
+
+Estimated Time
+
+1 Week
+
+---
+
+# 📌 Stage 3 — TensorFlow
+
+Installation
+
+Tensor
+
+Tensor Operations
+
+Tensor Shapes
+
+TensorFlow API
+
+GPU Support
+
+Automatic Differentiation
+
+Datasets
+
+Training Loop
+
+Saving Models
+
+Loading Models
+
+---
+
+Projects
+
+Basic ANN
+
+Image Classification
+
+Regression
+
+---
+
+Difficulty
+
+⭐⭐⭐
+
+Estimated Time
+
+1 Week
+
+---
+
+# 📌 Stage 4 — Keras
+
+Sequential API
+
+Functional API
+
+Model Building
+
+Layers
+
+Callbacks
+
+EarlyStopping
+
+ModelCheckpoint
+
+TensorBoard
+
+Transfer Learning
+
+Fine Tuning
+
+---
+
+Projects
+
+Customer Churn
+
+MNIST
+
+Fashion MNIST
+
+Regression
+
+---
+
+Difficulty
+
+⭐⭐⭐
+
+Estimated Time
+
+1 Week
+
+---
+
+# 📌 Stage 5 — PyTorch
+
+Tensor Basics
+
+Autograd
+
+Dataset Class
+
+DataLoader
+
+Model Class
+
+Training Loop
+
+GPU
+
+Saving Models
+
+Loading Models
+
+---
+
+Projects
+
+Image Classification
+
+Regression
+
+Transfer Learning
+
+---
+
+Difficulty
+
+⭐⭐⭐⭐
+
+Estimated Time
+
+2 Weeks
+
+---
+
+# 📌 Stage 6 — Artificial Neural Networks (ANN)
+
+Perceptron
+
+Feed Forward Network
+
+Activation Functions
+
+Loss Functions
+
+Optimization
+
+Overfitting
+
+Regularization
+
+Dropout
+
+Batch Normalization
+
+---
+
+Projects
+
+Customer Churn
+
+Heart Disease
+
+Loan Prediction
+
+Insurance Prediction
+
+---
+
+# 📌 Stage 7 — Convolutional Neural Networks (CNN)
+
+Images
+
+Convolution
+
+Pooling
+
+Padding
+
+Stride
+
+Filters
+
+Feature Maps
+
+Transfer Learning
+
+Image Augmentation
+
+---
+
+Projects
+
+Cat vs Dog
+
+MNIST
+
+Fashion MNIST
+
+Plant Disease Detection
+
+Face Mask Detection
+
+---
+
+Difficulty
+
+⭐⭐⭐⭐
+
+Estimated Time
+
+2 Weeks
+
+---
+
+# 📌 Stage 8 — Recurrent Neural Networks (RNN)
+
+Sequential Data
+
+Hidden State
+
+Vanishing Gradient
+
+Applications
+
+Time Series
+
+Text
+
+Speech
+
+---
+
+Projects
+
+Stock Prediction (Educational)
+
+Temperature Forecasting
+
+Sentiment Analysis
+
+---
+
+# 📌 Stage 9 — LSTM & GRU
+
+Long Short-Term Memory
+
+GRU
+
+Attention Mechanism
+
+Sequence Prediction
+
+Time Series
+
+Language Modeling
+
+---
+
+Projects
+
+Next Word Prediction
+
+Chatbot Basics
+
+Forecasting
+
+---
+
+Difficulty
+
+⭐⭐⭐⭐
+
+Estimated Time
+
+2 Weeks
+
+---
+
+# 📌 Stage 10 — Transformers
+
+Self Attention
+
+Multi Head Attention
+
+Positional Encoding
+
+Encoder
+
+Decoder
+
+BERT
+
+GPT
+
+T5
+
+Vision Transformers
+
+---
+
+Projects
+
+Text Classification
+
+Translation
+
+Question Answering
+
+Summarization
+
+---
+
+Difficulty
+
+⭐⭐⭐⭐⭐
+
+Estimated Time
+
+3 Weeks
+
+---
+
+# 📌 Stage 11 — Transfer Learning
+
+ResNet
+
+EfficientNet
+
+MobileNet
+
+VGG
+
+Inception
+
+Fine Tuning
+
+Feature Extraction
+
+---
+
+Projects
+
+Medical Image Classification
+
+Food Recognition
+
+Vehicle Classification
+
+---
+
+# 📌 Stage 12 — Model Optimization
+
+Learning Rate Scheduling
+
+Mixed Precision
+
+Model Quantization
+
+Knowledge Distillation
+
+Pruning
+
+ONNX
+
+TensorRT (Overview)
+
+---
+
+# 📌 Stage 13 — Deep Learning Deployment
+
+TensorFlow SavedModel
+
+TorchScript
+
+FastAPI Integration
+
+Docker
+
+Cloud Deployment
+
+Model Monitoring
+
+---
+
+# 📂 GitHub Structure
+
+DeepLearning/
+
+README.md
+
+datasets/
+
+01_tensorflow_basics.py
+
+02_keras_basics.py
+
+03_pytorch_basics.py
+
+04_ann.py
+
+05_cnn.py
+
+06_rnn.py
+
+07_lstm.py
+
+08_transformers_intro.py
+
+mini_projects/
+
+---
+
+# 📊 Major Projects
+
+MNIST Digit Recognition
+
+Fashion Image Classifier
+
+Plant Disease Detection
+
+Face Mask Detection
+
+Handwritten OCR
+
+Emotion Detection
+
+Brain Tumor Detection
+
+Image Caption Generator
+
+Text Generator
+
+Chatbot
+
+---
+
+# 📖 Interview Preparation
+
+Be able to explain:
+
+Why Deep Learning?
+
+Why ANN?
+
+Why CNN?
+
+Why RNN?
+
+Why LSTM?
+
+Why Transformers?
+
+Activation Functions
+
+Backpropagation
+
+Gradient Descent
+
+Overfitting
+
+Dropout
+
+Batch Normalization
+
+Transfer Learning
+
+Fine Tuning
+
+---
+
+# 📚 Recommended Resources
+
+Primary
+
+CampusX
+
+Secondary
+
+DeepLearning.AI
+
+TensorFlow Official Documentation
+
+PyTorch Official Documentation
+
+3Blue1Brown (Neural Networks)
+
+StatQuest
+
+---
+
+# 🎯 Success Criteria
+
+After completing this phase I should be able to:
+
+✔ Build ANN models
+
+✔ Build CNN models
+
+✔ Build RNN/LSTM models
+
+✔ Use TensorFlow
+
+✔ Use PyTorch
+
+✔ Apply Transfer Learning
+
+✔ Fine Tune Models
+
+✔ Deploy Deep Learning Models
+
+✔ Explain Deep Learning concepts confidently
+
+---
+
+# 🚀 END OF PART 6
+
