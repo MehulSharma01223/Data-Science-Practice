@@ -15,7 +15,7 @@ sns.histplot(
     palette="Set2",
     alpha=0.6,
     stat="count",
-    multiple="layer"
+    multiple ="dodge"
 )
 
 plt.title("Distribution of Total Bill")
