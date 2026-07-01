@@ -6,9 +6,9 @@ tips = sns.load_dataset("tips")
 # Professional Multi-grid Displot
 sns.displot(
     data=tips,
-    x="total_bill",
+    x="age",
     hue="sex",         # Colors by gender
-    col="time",        # Alag columns banayega (Lunch aur Dinner ke)
+    col="class",        # Alag columns banayega (Lunch aur Dinner ke)
     kind="kde",        # KDE curve use karega bajaye histogram ke
     fill=True,         # Curves ke andar color fill karega
     palette="Set2",
