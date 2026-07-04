@@ -5,7 +5,9 @@ titanic = sns.load_dataset("titanic")
 
 sns.countplot(
     data=titanic,
-    x="sex"
+    x="sex",
+    hue = "survived",
+    palette= "Set2"
 )
 
 plt.show()
