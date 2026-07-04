@@ -2,10 +2,10 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 iris = sns.load_dataset("iris")
-sns.kdeplot(
+sns.histplot(
     data =iris,
     x = "sepal_length",
-    fill=True
+    bins=15
 )
 
 sns.rugplot(
