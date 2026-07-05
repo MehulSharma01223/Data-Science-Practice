@@ -6,7 +6,9 @@ titanic = sns.load_dataset("titanic")
 sns.barplot(
     data=titanic,
     x="class",
-    y="fare"
+    y="fare",
+    hue="sex",
+    palette="Set2"
 )
 
 plt.show()
