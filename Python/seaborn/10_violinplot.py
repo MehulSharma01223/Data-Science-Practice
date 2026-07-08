@@ -5,7 +5,10 @@ titanic = sns.load_dataset("titanic")
 
 sns.violinplot(
     data=titanic,
-    y="age"
+    x="class",
+    y="fare",
+    hue="sex",
+    palette="Set2"
 )
 
 plt.show()
